@@ -8,20 +8,27 @@ const BENEFITS = [
     icon: Rocket,
     title: "Ship fast",
     description:
-      "Go from idea to working demo in 48 hours with mentors, free API credits, and workshops on tap.",
+      "Go from blank repo to a working demo in 48 hours with mentors, free dev tools, and workshops on tap.",
   },
   {
     icon: Users,
-    title: "Find your team",
+    title: "Find your squad",
     description:
-      "Registering solo? We'll help you match with teammates who complement your skills before day one.",
+      "Coming solo? We'll match you with teammates from other schools before check-in even starts.",
   },
   {
     icon: Trophy,
-    title: "Real prizes",
+    title: "Bragging rights",
     description:
-      "$25,000 across four tracks, plus interview fast-tracks with our sponsor partners.",
+      "$10,000 in prizes, plus scholarship leads and internship fast-tracks from our sponsors.",
   },
+];
+
+const STATS = [
+  { value: "500+", label: "Students" },
+  { value: "48", label: "Hours" },
+  { value: "15+", label: "Schools" },
+  { value: "20+", label: "Mentors" },
 ];
 
 export function Benefits() {
@@ -31,22 +38,31 @@ export function Benefits() {
         <div className="relative overflow-hidden rounded-md-lg bg-linear-to-br from-md-primary to-md-tertiary sm:rounded-md-2xl lg:rounded-md-3xl">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.25)_0%,transparent_45%)]"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-md-secondary-container/30 blur-3xl"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(white_1.5px,transparent_1.5px)] bg-size-[20px_20px] opacity-10"
           />
 
           <div className="relative z-10 px-6 py-14 sm:px-12 sm:py-20 lg:px-16">
             <div className="mx-auto max-w-xl text-center">
               <Badge variant="glass">Why join</Badge>
-              <h2 className="mt-4 text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="mt-4 font-heading text-3xl font-semibold tracking-tight text-white uppercase sm:text-4xl lg:text-5xl">
                 Everything you need to build
               </h2>
               <p className="mt-3 text-white/80">
                 We handle the logistics so you can focus on the thing you came to make.
               </p>
+            </div>
+
+            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 border-y border-white/20 py-8 sm:grid-cols-4">
+              {STATS.map((stat) => (
+                <div key={stat.label} className="flex flex-col items-center">
+                  <span className="font-heading text-3xl font-semibold text-md-secondary-container sm:text-4xl">
+                    {stat.value}
+                  </span>
+                  <span className="text-xs text-white/70 uppercase tracking-wide sm:text-sm">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
             </div>
 
             <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -61,7 +77,7 @@ export function Benefits() {
                     <span className="flex h-11 w-11 items-center justify-center rounded-md-sm bg-white/15">
                       <Icon className="h-5 w-5 text-white" aria-hidden="true" />
                     </span>
-                    <h3 className="mt-5 text-lg font-medium text-white">{title}</h3>
+                    <h3 className="mt-5 font-heading text-lg font-semibold text-white uppercase">{title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-white/75">
                       {description}
                     </p>

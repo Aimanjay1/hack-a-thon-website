@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, Oswald } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -8,14 +8,20 @@ const roboto = Roboto({
   weight: ["400", "500", "700"],
 });
 
+const oswald = Oswald({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "Build/Ship/Win — Hackathon 2026",
+  title: "CodeDojo — High School Hackathon 2026",
   description:
-    "A 48-hour hackathon for builders. Form a team, pick a track, and ship something real — March 14–16, 2026.",
+    "CodeDojo is a 48-hour high school hackathon. Form a team, pick your dojo, and build something worth bragging about — November 6–8, 2026.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#6750a4",
+  themeColor: "#7a1620",
 };
 
 export default function RootLayout({
@@ -24,7 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`h-full antialiased ${roboto.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`h-full antialiased ${roboto.variable} ${oswald.variable}`}
+    >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
       </body>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Menu, Sparkles } from "lucide-react";
+import { Menu } from "lucide-react";
 import { buttonVariants, Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -12,8 +12,8 @@ import {
 import { Container } from "@/components/ui/container";
 
 const NAV_LINKS = [
-  { href: "#tracks", label: "Tracks" },
   { href: "#schedule", label: "Schedule" },
+  { href: "#prizes", label: "Prizes" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -22,11 +22,11 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-md-outline/15 bg-md-background/80 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between sm:h-20">
         <Link href="#top" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-md-sm bg-md-primary text-md-on-primary">
-            <Sparkles className="h-4 w-4" aria-hidden="true" />
+          <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-md-secondary-container bg-md-primary">
+            <span className="font-heading text-xs font-bold text-md-secondary-container">CD</span>
           </span>
-          <span className="text-[1.05rem] font-medium tracking-tight">
-            Build/Ship/Win
+          <span className="font-heading text-lg font-semibold tracking-tight uppercase">
+            Hack-a-thon
           </span>
         </Link>
 
@@ -44,7 +44,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <Link href="#register" className={buttonVariants({ size: "sm" })}>
-            Register
+            Enroll
           </Link>
 
           <Sheet>
@@ -55,7 +55,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader>
-                <SheetTitle>Build/Ship/Win</SheetTitle>
+                <SheetTitle>CodeDojo: Hack-a-thon</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-6">
                 {NAV_LINKS.map((link) => (

@@ -1,85 +1,52 @@
 import Link from "next/link";
-import { Calendar, MapPin, Wallet } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
-
-const META = [
-  { icon: Calendar, label: "March 13–15, 2026" },
-  { icon: MapPin, label: "Austin, TX + Remote" },
-  { icon: Wallet, label: "$25,000 in prizes" },
-];
-
-const STATS = [
-  { value: "500+", label: "Hackers" },
-  { value: "48", label: "Hours" },
-  { value: "4", label: "Tracks" },
-  { value: "20+", label: "Mentors" },
-];
 
 export function Hero() {
   return (
     <section id="top" className="pt-6 sm:pt-10">
       <Container>
-        <div className="relative overflow-hidden rounded-md-lg bg-md-surface-container sm:rounded-md-2xl lg:rounded-md-3xl">
-          {/* Organic blur shapes — decorative only */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-md-primary/30 blur-3xl mix-blend-multiply"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-16 top-1/3 h-72 w-72 rounded-full bg-md-tertiary/30 blur-3xl mix-blend-multiply"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute bottom-0 left-1/3 h-64 w-64 translate-y-1/3 rounded-full bg-md-secondary-container/60 blur-3xl mix-blend-multiply"
-          />
+        <div className="overflow-hidden rounded-md-lg bg-md-tertiary sm:rounded-md-2xl lg:rounded-md-3xl">
+          <div className="grid lg:grid-cols-[1.3fr_1fr]">
+            <div className="flex flex-col justify-center gap-6 bg-md-surface-container px-6 py-16 sm:px-12 sm:py-20 lg:px-16">
+              <Badge variant="pennant" className="self-start">
+                CODEDOJO
+              </Badge>
 
-          <div className="relative z-10 flex flex-col items-center gap-6 px-6 py-16 text-center sm:px-12 sm:py-24 lg:px-16">
-            <Badge variant="secondary">Registration is open</Badge>
+              <h1 className="font-heading text-6xl leading-[0.95] font-bold tracking-tight uppercase sm:text-7xl lg:text-8xl">
+                Hack-<span className="text-md-primary">A</span>-THON
+              </h1>
 
-            <h1 className="max-w-3xl text-[2.75rem] font-medium leading-[1.15] tracking-tight sm:text-6xl lg:text-7xl">
-              Build. Ship. <span className="text-md-primary">Win.</span>
-            </h1>
+              <p className="max-w-md text-lg leading-relaxed text-md-on-surface-variant">
+                48 hours. One dojo. Student teams from schools across the
+                region go head-to-head to ship the boldest project they&apos;ve
+                ever built. First hackathon? Even better.
+              </p>
 
-            <p className="max-w-xl text-lg leading-relaxed text-md-on-surface-variant sm:text-xl">
-              A 48-hour hackathon for builders. Form a team, pick a track, and
-              turn your idea into a working demo — no experience required.
-            </p>
-
-            <div className="mt-2 flex flex-col gap-4 sm:flex-row">
-              <Link href="#register" className={buttonVariants({ size: "lg" })}>
-                Register now
-              </Link>
-              <Link
-                href="#schedule"
-                className={buttonVariants({ variant: "outline", size: "lg" })}
-              >
-                View schedule
-              </Link>
+              <div className="mt-2 flex flex-col gap-4 sm:flex-row">
+                <Link href="#register" className={buttonVariants({ size: "lg" })}>
+                  Enroll your team
+                </Link>
+                <Link
+                  href="#schedule"
+                  className={buttonVariants({ variant: "outline", size: "lg" })}
+                >
+                  See the timeline
+                </Link>
+              </div>
             </div>
 
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-              {META.map(({ icon: Icon, label }) => (
-                <Badge key={label} variant="outline" className="bg-md-background/60">
-                  <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-                  {label}
-                </Badge>
-              ))}
-            </div>
-
-            <div className="mt-8 grid w-full max-w-2xl grid-cols-2 gap-6 border-t border-md-outline/20 pt-8 sm:grid-cols-4">
-              {STATS.map((stat) => (
-                <div key={stat.label} className="flex flex-col items-center">
-                  <span className="text-2xl font-medium text-md-primary sm:text-3xl">
-                    {stat.value}
-                  </span>
-                  <span className="text-xs text-md-on-surface-variant sm:text-sm">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
+            <div className="relative flex items-center justify-center overflow-hidden bg-md-tertiary px-10 py-16 lg:[clip-path:polygon(8%_0,100%_0,100%_100%,0_100%)]">
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-[radial-gradient(white_1.5px,transparent_1.5px)] bg-size-[18px_18px] opacity-15"
+              />
+              <div className="relative flex h-40 w-40 shrink-0 items-center justify-center rounded-full border-4 border-md-secondary-container bg-md-primary shadow-md-lg sm:h-48 sm:w-48">
+                <span className="font-heading text-5xl font-bold text-md-secondary-container sm:text-6xl">
+                  CD
+                </span>
+              </div>
             </div>
           </div>
         </div>

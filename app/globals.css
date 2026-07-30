@@ -2,27 +2,27 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* Material You (MD3) tokens — seed color #6750A4 (purple/violet) */
+/* CodeDojo high-school hackathon palette — charcoal / maroon / cream / navy / gold */
 :root {
-  --md-background: #fffbfe;
-  --md-foreground: #1c1b1f;
-  --md-primary: #6750a4;
+  --md-background: #faf1ce;
+  --md-foreground: #242327;
+  --md-primary: #7a1620;
   --md-on-primary: #ffffff;
-  --md-primary-container: #eaddff;
-  --md-on-primary-container: #21005d;
-  --md-secondary-container: #e8def8;
-  --md-on-secondary-container: #1d192b;
-  --md-tertiary: #7d5260;
+  --md-primary-container: #f3dcdc;
+  --md-on-primary-container: #3d0b10;
+  --md-secondary-container: #f4bc6a;
+  --md-on-secondary-container: #242327;
+  --md-tertiary: #2c4359;
   --md-on-tertiary: #ffffff;
-  --md-surface-container: #f3edf7;
-  --md-surface-container-low: #e7e0ec;
-  --md-outline: #79747e;
-  --md-outline-variant: #cac4d0;
-  --md-on-surface-variant: #49454f;
+  --md-surface-container: #f2e4b6;
+  --md-surface-container-low: #ead89a;
+  --md-outline: #8c7b4e;
+  --md-outline-variant: #ddcb94;
+  --md-on-surface-variant: #5c5240;
   --md-error: #b3261e;
   --md-on-error: #ffffff;
 
-  /* shadcn semantic tokens, mapped onto the MD3 palette above */
+  /* shadcn semantic tokens, mapped onto the palette above */
   --background: var(--md-background);
   --foreground: var(--md-foreground);
   --card: var(--md-surface-container);
@@ -59,21 +59,21 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --md-background: #1c1b1f;
-    --md-foreground: #e6e1e5;
-    --md-primary: #d0bcff;
-    --md-on-primary: #381e72;
-    --md-primary-container: #4f378b;
-    --md-on-primary-container: #eaddff;
-    --md-secondary-container: #4a4458;
-    --md-on-secondary-container: #e8def8;
-    --md-tertiary: #efb8c8;
-    --md-on-tertiary: #492532;
-    --md-surface-container: #211f26;
-    --md-surface-container-low: #1d1b20;
-    --md-outline: #938f99;
-    --md-outline-variant: #49454f;
-    --md-on-surface-variant: #cac4d0;
+    --md-background: #1b1a1c;
+    --md-foreground: #f5eacd;
+    --md-primary: #f4bc6a;
+    --md-on-primary: #242327;
+    --md-primary-container: #5c4322;
+    --md-on-primary-container: #fce2b0;
+    --md-secondary-container: #7a1620;
+    --md-on-secondary-container: #f8dcdc;
+    --md-tertiary: #5a7fa6;
+    --md-on-tertiary: #0f1d2b;
+    --md-surface-container: #29282c;
+    --md-surface-container-low: #232226;
+    --md-outline: #8f805a;
+    --md-outline-variant: #3a362e;
+    --md-on-surface-variant: #c9bc93;
     --md-error: #f2b8b5;
     --md-on-error: #601410;
   }
@@ -99,7 +99,7 @@
   --color-md-on-error: var(--md-on-error);
 
   --font-sans: var(--font-sans);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-heading);
 
   --radius-md-xs: 8px;
   --radius-md-sm: 12px;
@@ -117,6 +117,7 @@
   --shadow-md-xl: 0 20px 48px -12px rgb(0 0 0 / 0.18), 0 8px 20px -6px rgb(0 0 0 / 0.1);
 
   --animate-md-fade-up: md-fade-up 0.5s var(--ease-md) both;
+  --animate-marquee: marquee 32s linear infinite;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -169,6 +170,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 

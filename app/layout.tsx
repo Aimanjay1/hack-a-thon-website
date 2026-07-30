@@ -15,9 +15,9 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "CodeDojo — High School Hackathon 2026",
+  title: "CodeDojo: Hack-a-thon 2026",
   description:
-    "CodeDojo is a 48-hour high school hackathon. Form a team, pick your dojo, and build something worth bragging about — November 6–8, 2026.",
+    "CodeDojo is a 48-hour high school hackathon. Form a team, pick your dojo, and build something worth bragging about — October 15-17, 2026.",
 };
 
 export const viewport: Viewport = {

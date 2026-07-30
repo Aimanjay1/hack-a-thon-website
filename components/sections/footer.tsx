@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Globe, Mail, MessageCircle, Sparkles } from "lucide-react";
+import { Globe, Mail, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/container";
 
 const LINK_GROUPS = [
@@ -7,16 +7,16 @@ const LINK_GROUPS = [
     title: "Event",
     links: [
       { label: "Overview", href: "#top" },
-      { label: "Tracks", href: "#tracks" },
       { label: "Schedule", href: "#schedule" },
-      { label: "FAQ", href: "#faq" },
+      { label: "Prizes", href: "#prizes" },
+      { label: "FAQ & rules", href: "#faq" },
     ],
   },
   {
     title: "Info",
     links: [
-      { label: "Code of conduct", href: "#" },
-      { label: "Sponsors", href: "#" },
+      { label: "Code of conduct", href: "#faq" },
+      { label: "Sponsors", href: "#sponsors" },
       { label: "Press kit", href: "#" },
     ],
   },
@@ -25,26 +25,28 @@ const LINK_GROUPS = [
 const SOCIALS = [
   { icon: MessageCircle, label: "Community chat", href: "#" },
   { icon: Globe, label: "Website", href: "#" },
-  { icon: Mail, label: "Email", href: "mailto:hello@buildshipwin.dev" },
+  { icon: Mail, label: "Email", href: "mailto:hello@codedojo.dev" },
 ];
 
 export function Footer() {
   return (
-    <footer className="mt-8 border-t border-md-outline/15">
-      <Container className="py-14">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-2">
+    <footer className="mt-8 bg-md-tertiary text-white">
+      <Container className="py-16">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div>
             <Link href="#top" className="flex items-center gap-2.5">
-              <span className="flex h-8 w-8 items-center justify-center rounded-md-sm bg-md-primary text-md-on-primary">
-                <Sparkles className="h-4 w-4" aria-hidden="true" />
+              <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-md-secondary-container bg-md-primary">
+                <span className="font-heading text-sm font-bold text-md-secondary-container">
+                  CD
+                </span>
               </span>
-              <span className="text-[1.05rem] font-medium tracking-tight">
-                Build/Ship/Win
+              <span className="font-heading text-xl font-semibold tracking-tight uppercase">
+                CodeDojo
               </span>
             </Link>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-md-on-surface-variant">
-              A 48-hour hackathon for builders — March 13–15, 2026 in Austin,
-              TX and online.
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
+              A 48-hour high school hackathon — November 6–8, 2026, at the
+              Downtown Convention Center in Austin, TX.
             </p>
             <div className="mt-5 flex items-center gap-1">
               {SOCIALS.map(({ icon: Icon, label, href }) => (
@@ -52,7 +54,7 @@ export function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full text-md-on-surface-variant transition-all duration-200 ease-md hover:bg-md-primary/10 hover:text-md-primary active:scale-95"
+                  className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 transition-all duration-200 ease-md hover:bg-white/10 hover:text-md-secondary-container active:scale-95"
                 >
                   <Icon className="h-4.5 w-4.5" aria-hidden="true" />
                 </a>
@@ -62,7 +64,7 @@ export function Footer() {
 
           {LINK_GROUPS.map((group) => (
             <div key={group.title}>
-              <h3 className="text-sm font-medium text-md-on-surface-variant">
+              <h3 className="font-heading text-xs font-semibold tracking-widest text-md-secondary-container uppercase">
                 {group.title}
               </h3>
               <ul className="mt-4 flex flex-col gap-3">
@@ -70,7 +72,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm transition-colors duration-200 hover:text-md-primary"
+                      className="text-sm text-white/80 transition-colors duration-200 hover:text-white"
                     >
                       {link.label}
                     </Link>
@@ -79,11 +81,27 @@ export function Footer() {
               </ul>
             </div>
           ))}
+
+          <div>
+            <h3 className="font-heading text-xs font-semibold tracking-widest text-md-secondary-container uppercase">
+              Questions
+            </h3>
+            <p className="mt-4 text-sm leading-relaxed text-white/80">
+              Reach the organizing crew any time — we usually reply within a
+              day.
+            </p>
+            <a
+              href="mailto:hello@codedojo.dev"
+              className="mt-3 inline-block text-sm font-medium text-md-secondary-container hover:underline"
+            >
+              hello@codedojo.dev
+            </a>
+          </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-md-outline/15 pt-6 text-xs text-md-on-surface-variant sm:flex-row">
-          <p>© 2026 Build/Ship/Win. All rights reserved.</p>
-          <p>Built with Next.js, Tailwind, and Material You.</p>
+        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/60 sm:flex-row">
+          <p>© 2026 CodeDojo. All rights reserved.</p>
+          <p>Built by the CodeDojo crew, for builders.</p>
         </div>
       </Container>
     </footer>

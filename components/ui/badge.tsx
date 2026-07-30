@@ -15,6 +15,8 @@ const badgeVariants = cva(
         outline: "border-md-outline/60 text-md-on-surface-variant [a]:hover:bg-primary/5",
         glass: "border-white/20 bg-white/15 text-white backdrop-blur-sm [a]:hover:bg-white/20",
         destructive: "bg-destructive/10 text-destructive [a]:hover:bg-destructive/20",
+        pennant:
+          "rounded-none border-none bg-md-primary py-2 pr-7 pl-4 font-heading text-xs tracking-wider text-white uppercase [clip-path:polygon(0_0,88%_0,100%_50%,88%_100%,0_100%)]",
       },
     },
     defaultVariants: {

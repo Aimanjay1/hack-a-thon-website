@@ -4,7 +4,7 @@
 
 /* CodeDojo high-school hackathon palette — charcoal / maroon / cream / navy / gold */
 :root {
-  --md-background: #faf1ce;
+  --md-background: #022251;
   --md-foreground: #242327;
   --md-primary: #7a1620;
   --md-on-primary: #ffffff;
@@ -59,7 +59,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --md-background: #1b1a1c;
+    --md-background: #07013f;
     --md-foreground: #f5eacd;
     --md-primary: #f4bc6a;
     --md-on-primary: #242327;

@@ -17,6 +17,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <br />
         <Countdown />
         <EventInfoStrip />
         <Benefits />

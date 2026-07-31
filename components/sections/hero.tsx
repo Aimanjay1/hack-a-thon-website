@@ -7,9 +7,9 @@ export function Hero() {
   return (
     <section id="top" className="pt-6 sm:pt-10">
       <Container>
-        <div className="overflow-hidden rounded-md-lg bg-md-tertiary sm:rounded-md-2xl lg:rounded-md-3xl">
+        <div>
           <div className="grid lg:grid-cols-[1.3fr_1fr]">
-            <div className="flex flex-col justify-center gap-6 bg-md-surface-container px-6 py-16 sm:px-12 sm:py-20 lg:px-16">
+            <div className="flex flex-col justify-center gap-6 px-6 py-16 sm:px-12 sm:py-20 lg:px-16">
               <Badge variant="pennant" className="self-start">
                 CODEDOJO
               </Badge>
@@ -37,11 +37,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center overflow-hidden bg-md-tertiary px-10 py-16 lg:[clip-path:polygon(8%_0,100%_0,100%_100%,0_100%)]">
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-[radial-gradient(white_1.5px,transparent_1.5px)] bg-size-[18px_18px] opacity-15"
-              />
+            <div className="relative flex items-center justify-center px-10 py-16">
               <div className="relative flex h-40 w-40 shrink-0 items-center justify-center rounded-full border-4 border-md-secondary-container bg-md-primary shadow-md-lg sm:h-48 sm:w-48">
                 <span className="font-heading text-5xl font-bold text-md-secondary-container sm:text-6xl">
                   CD

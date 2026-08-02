@@ -1,7 +1,6 @@
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
 import { Countdown } from "@/components/sections/countdown";
-import { EventInfoStrip } from "@/components/sections/event-info-strip";
 import { Benefits } from "@/components/sections/benefits";
 import { ScheduleTimeline } from "@/components/sections/schedule-timeline";
 import { SponsorsMarquee } from "@/components/sections/sponsors-marquee";
@@ -19,7 +18,6 @@ export default function Home() {
         <Hero />
         <br />
         <Countdown />
-        <EventInfoStrip />
         <Benefits />
         <ScheduleTimeline />
         <SponsorsMarquee />

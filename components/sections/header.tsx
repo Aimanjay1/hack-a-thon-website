@@ -22,11 +22,13 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-md-outline/15 bg-md-background/80 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between sm:h-20">
         <Link href="#top" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-md-secondary-container bg-md-primary">
-            <span className="font-heading text-xs font-bold text-md-secondary-container">CD</span>
-          </span>
-          <span className="font-heading text-lg font-semibold tracking-tight uppercase">
-            Hack-a-thon
+          <img
+            src="/logo hackaton.png"
+            alt="Hack-a-ton Logo"
+            className="h-8 w-8 sm:h-10 sm:w-10"
+          />
+          <span className="font-heading text-lg tracking-tight uppercase varsity-title text-[#7b1113]">
+            Hack-a-ton
           </span>
         </Link>
 

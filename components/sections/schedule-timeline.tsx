@@ -35,11 +35,11 @@ export function ScheduleTimeline() {
           </p>
         </div>
 
-        <div className="mt-14 flex flex-row gap-4">
+        <div className="mt-14 flex flex-col gap-6 md:flex-row">
           {DAYS.map((card) => (
             <div
               key={card.day}
-              className="flex flex-col justify-between border-2 border-md-outline-variant bg-[#7b1113] p-10 shadow-sm"
+              className="flex flex-1 flex-col justify-between border-2 border-md-outline-variant bg-[#7b1113] p-6 shadow-sm sm:p-10"
                style={{ borderRadius: 0 }}
             >
             <span className="bg-md-primary/10 px-3 py-1 text-[15px] varsity-title tracking-widest text-md-primary ">

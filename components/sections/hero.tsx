@@ -4,11 +4,11 @@ import { Container } from "@/components/ui/container";
 
 export function Hero() {
   return (
-    <section id="top" className="pt-6 sm:pt-10">
+    <section id="top" className="pt-2 sm:pt-4">
       <Container>
         <div>
           <div className="grid lg:grid-cols-[1.3fr_1fr]">
-            <div className="flex flex-col justify-center gap-6 px-6 py-16 sm:px-12 sm:py-20 lg:px-16">
+            <div className="flex flex-col justify-center gap-6 px-6 py-8 sm:px-12 sm:py-16 lg:px-16 lg:py-20">
               <Badge variant="pennant" className="self-start varsity-title tracking-normal">
                 CODEDOJO
               </Badge>
@@ -18,9 +18,9 @@ export function Hero() {
               </h1>
 
               <p className="max-w-md text-lg leading-relaxed text-[#1d3557] domine italic">
-                48 hours. One dojo. Student teams from schools across the
-                region go head-to-head to ship the boldest project they&apos;ve
-                ever built. First hackathon? Even better.
+                Join our hackathon and bring your ideas to life. 
+                Whether you're a beginner or an experienced developer, 
+                this is your chance to learn, collaborate, and compete for exciting prizes.
               </p>
 
               <div className="mt-2 flex flex-col gap-4 sm:flex-row">
@@ -45,10 +45,11 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center px-10 py-16">
+            <div className="relative flex items-center justify-center px-6 py-4 sm:px-10 sm:py-8">
               <img
-                src="/MotionU Logo.png"
-                alt="MotionU Logo"
+                src="/logo hackaton.png"
+                alt="Hack-a-ton Logo"
+                className="w-48 sm:w-64 lg:w-auto"
                 style={{ animation: "float 2s ease-in-out infinite" }}
               />
             </div>

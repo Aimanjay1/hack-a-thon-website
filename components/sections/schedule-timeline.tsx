@@ -3,70 +3,51 @@ import { Container } from "@/components/ui/container";
 
 const DAYS = [
   {
-    day: "Day 1 — Friday",
-    events: [
-      { time: "4:00 PM", title: "Check-in & team formation", description: "Badge pickup, swag, and a mixer to find teammates if you came solo." },
-      { time: "5:00 PM", title: "Opening ceremony", description: "Rules, judging criteria, and a few words from this year's sponsors." },
-      { time: "6:00 PM", title: "Hacking begins", description: "Clock starts. Grab a mentor, claim a table, and start building." },
-    ],
+    day: "DAY 1",
+    description:
+      "Online briefing to introduce the hackathon, event guidelines, and participant preparation.",
   },
   {
-    day: "Day 2 — Saturday",
-    events: [
-      { time: "9:00 AM", title: "Workshop: API sprint", description: "Optional crash course on the sponsor APIs and starter kits." },
-      { time: "1:00 PM", title: "Mentor office hours", description: "Stuck? Rotate through mentor tables for 1:1 help all afternoon." },
-      { time: "8:00 PM", title: "Midnight oil", description: "Snacks, energy drinks, and a round of mini-games to keep spirits up." },
-    ],
+    day: "DAY 2",
+    description:
+      "Opening ceremony, theme announcement, team formation, and 24-hour web development challenge.",
   },
   {
-    day: "Day 3 — Sunday",
-    events: [
-      { time: "9:00 AM", title: "Hacking ends", description: "Pencils down. Final commits and submissions are locked." },
-      { time: "10:00 AM", title: "Judging", description: "Teams demo live to a panel of industry and faculty judges." },
-      { time: "1:00 PM", title: "Awards ceremony", description: "Prizes, shoutouts, and the closing group photo." },
-    ],
+    day: "DAY 3",
+    description:
+      "Project submission, team presentations, judging session, and award & closing ceremony.",
   },
 ];
 
 export function ScheduleTimeline() {
   return (
-    <section id="schedule" className="py-16 sm:py-24">
-      <Container className="max-w-3xl">
+    <section id="schedule" className="py-16 sm:py-24 bg-[#1d3557]">
+      <Container className="max-w-5xl">
         <div className="text-center">
-          <Badge variant="pennant" className="mx-auto">
+          <Badge variant="pennant" className="mx-auto varsity-title">
             Schedule
           </Badge>
-          <h2 className="mt-4 font-heading text-3xl font-semibold tracking-tight uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl tracking- uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
             The dojo timeline
           </h2>
-          <p className="mt-3 text-md-on-surface-variant">
+          <p className="mt-3 text-md-on-surface-variant domine italic">
             Three days, one relentless build. Here&apos;s how it runs.
           </p>
         </div>
 
-        <div className="mt-14 flex flex-col gap-12">
-          {DAYS.map((group) => (
-            <div key={group.day}>
-              <h3 className="font-heading text-lg font-semibold tracking-wide text-md-primary uppercase">
-                {group.day}
-              </h3>
-              <div className="relative mt-6 flex flex-col gap-8 border-l-2 border-md-primary/25 pl-8">
-                {group.events.map((event) => (
-                  <div key={event.title} className="relative">
-                    <span
-                      aria-hidden="true"
-                      className="absolute top-1.5 left-[-2.35rem] flex h-4 w-4 items-center justify-center rounded-full border-2 border-md-primary bg-md-secondary-container"
-                    />
-                    <span className="font-heading text-xs font-semibold tracking-widest text-md-tertiary uppercase">
-                      {event.time}
-                    </span>
-                    <h4 className="mt-1 text-lg font-medium">{event.title}</h4>
-                    <p className="mt-1 text-sm leading-relaxed text-md-on-surface-variant">
-                      {event.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+        <div className="mt-14 flex flex-col gap-6 md:flex-row">
+          {DAYS.map((card) => (
+            <div
+              key={card.day}
+              className="flex flex-1 flex-col justify-between border-2 border-md-outline-variant bg-[#7b1113] p-6 shadow-sm sm:p-10"
+               style={{ borderRadius: 0 }}
+            >
+            <span className="bg-md-primary/10 px-3 py-1 text-[15px] varsity-title tracking-widest text-md-primary ">
+                {card.day}
+              </span>
+               <p className="mt-8 text-[16px] text-sm italic leading-relaxed text-[#e0dac7] domine">
+                {card.description}
+              </p>
             </div>
           ))}
         </div>

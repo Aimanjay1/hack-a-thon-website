@@ -2,6 +2,49 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+
+.domine {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+    /* Multi-layered effect for headers */
+
+      .varsity-title {
+      font-family: 'Alfa Slab One', cursive;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    
+    .varsity-layered-navy {
+      color: #1d3557;
+      text-shadow: 
+        2px 2px 0px #fff9eb,
+        4px 4px 0px #7b1113;
+    }
+    .varsity-layered-burgundy {
+      color: #7b1113;
+      text-shadow: 
+        2px 2px 0px #fff9eb,
+        4px 4px 0px #1d3557;
+    }
+    .varsity-layered-white {
+      color: #fff9eb;
+      text-shadow: 
+        2px 2px 0px #1d3557,
+        4px 4px 0px #7b1113;
+    }
+    .text-outline {
+      -webkit-text-stroke: 1px currentColor;
+      color: transparent;
+    }
+
 /* CodeDojo high-school hackathon palette — charcoal / maroon / cream / navy / gold */
 :root {
   --md-background: #022251;
@@ -180,6 +223,11 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

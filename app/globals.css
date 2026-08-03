@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+html {
+  scroll-behavior: smooth;
+}
 
 .domine {
   font-family: "Domine", serif;
@@ -105,7 +108,7 @@
     --md-background: #fffdd0;
     --md-foreground: #f5eacd;
     --md-primary: #f4bc6a;
-    --md-on-primary: #242327;
+    --md-on-primary: #856300;
     --md-primary-container: #5c4322;
     --md-on-primary-container: #fce2b0;
     --md-secondary-container: #7a1620;

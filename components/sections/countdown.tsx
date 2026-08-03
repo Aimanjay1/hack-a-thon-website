@@ -3,11 +3,10 @@
 import { useEffect, useState } from "react";
 import { Calendar, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { PHASES } from "@/data";
 
-const EVENT_DATE = new Date("2026-10-15T09:00:00-06:00").getTime();
-
-function getTimeLeft() {
-  const diff = Math.max(EVENT_DATE - Date.now(), 0);
+function getTimeLeft(targetMs: number) {
+  const diff = Math.max(targetMs - Date.now(), 0);
   return {
     days: Math.floor(diff / 86_400_000),
     hours: Math.floor((diff / 3_600_000) % 24),
@@ -16,18 +15,29 @@ function getTimeLeft() {
   };
 }
 
+function getCurrentPhase() {
+  const now = Date.now();
+  return PHASES.find((p) => new Date(p.date).getTime() > now) ?? null;
+}
+
 export function Countdown() {
+  const [phase, setPhase] = useState(getCurrentPhase);
   const [timeLeft, setTimeLeft] = useState<ReturnType<typeof getTimeLeft> | null>(null);
 
   useEffect(() => {
-    const tick = () => setTimeLeft(getTimeLeft());
+    const targetMs = phase ? new Date(phase.date).getTime() : 0;
+    const tick = () => {
+      setTimeLeft(getTimeLeft(targetMs));
+      const next = getCurrentPhase();
+      if (next?.label !== phase?.label) setPhase(next);
+    };
     const timeout = setTimeout(tick, 0);
     const interval = setInterval(tick, 1000);
     return () => {
       clearTimeout(timeout);
       clearInterval(interval);
     };
-  }, []);
+  }, [phase]);
 
   const units: Array<{ label: string; value: number | undefined }> = [
     { label: "Days", value: timeLeft?.days },
@@ -40,7 +50,7 @@ export function Countdown() {
     <section className="border-y-4 border-md-secondary-container bg-md-tertiary py-10 sm:py-14" aria-label="Countdown to CodeDojo">
       <Container>
         <p className="text-center text-xs tracking-[0.3em] text-white/60 uppercase sm:text-sm" style={{ fontFamily: "'Alfa Slab One', serif" }}>
-          Dojo doors open in
+          {phase && `${phase.label} in`}
         </p>
         <div className="mx-auto mt-4 grid max-w-2xl grid-cols-4 gap-3 sm:gap-6">
           {units.map((unit) => (

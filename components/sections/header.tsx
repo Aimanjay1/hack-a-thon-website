@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
-import { buttonVariants, Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -27,7 +27,7 @@ export function Header() {
             alt="Hack-a-ton Logo"
             className="h-8 w-8 sm:h-10 sm:w-10"
           />
-          <span className="font-heading text-lg tracking-tight uppercase varsity-title text-[#7b1113]">
+          <span className="text-lg tracking-tight uppercase varsity-title text-[#7b1113]">
             Hack-a-ton
           </span>
         </Link>
@@ -37,7 +37,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-md-on-surface-variant transition-colors duration-200 hover:text-md-primary"
+              className="text-sm text-[#856300] varsity-title transition-colors duration-200 hover:text-md-primary"
             >
               {link.label}
             </Link>
@@ -45,7 +45,11 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link href="#register" className={buttonVariants({ size: "sm" })}>
+          <Link
+            href="#register"
+            className="inline-flex items-center justify-center rounded-none px-5 py-2 text-base transition-colors duration-200 bg-primary text-primary-foreground hover:bg-[#7a1620] hover:text-white"
+            style={{ fontFamily: "'Alfa Slab One', serif" }}
+          >
             Enroll
           </Link>
 
@@ -57,14 +61,14 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader>
-                <SheetTitle>CodeDojo: Hack-a-thon</SheetTitle>
+                <SheetTitle className="varsity-title">CodeDojo: Hack-a-thon</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-6">
                 {NAV_LINKS.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link
                       href={link.href}
-                      className="rounded-md-sm px-3 py-3 text-base font-medium transition-colors duration-200 hover:bg-md-primary/10 hover:text-md-primary"
+                      className="rounded-md-sm px-3 py-3 text-base varsity-title transition-colors duration-200 hover:bg-md-primary/10 hover:text-md-primary"
                     >
                       {link.label}
                     </Link>

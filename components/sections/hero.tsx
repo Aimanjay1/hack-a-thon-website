@@ -50,7 +50,7 @@ export function Hero() {
                 src="/logo hackaton.png"
                 alt="Hack-a-ton Logo"
                 className="w-48 sm:w-64 lg:w-auto"
-                style={{ animation: "float 2s ease-in-out infinite" }}
+                style={{ animation: "float 3s ease-in-out infinite" }}
               />
             </div>
           </div>

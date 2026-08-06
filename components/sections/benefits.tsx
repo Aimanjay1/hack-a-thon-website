@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import benefitsData from "@/data/benefits.json";
 
 const BENEFITS = [
   {
@@ -67,7 +68,7 @@ export function Benefits() {
               ))}
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 border-y border-white/20 py-8 sm:grid-cols-4">
+        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 border-y border-white/20 py-8 sm:grid-cols-4 hidden">
               {STATS.map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center">
                   <span className="font-heading text-3xl font-semibold text-md-secondary-container sm:text-4xl">

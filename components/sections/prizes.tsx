@@ -1,33 +1,15 @@
-import { Award, Medal, Trophy } from "lucide-react";
+import { Award, Icon, Medal, Trophy, type LucideIcon } from "lucide-react";
+import prizesData from "@/data/prizes.json";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 
-const PRIZES = [
-  {
-    icon: Medal,
-    place: "Runner-Up",
-    amount: "$2,500",
-    description: "Cash prize plus a laptop upgrade kit for every team member.",
-    className: "bg-md-surface-container-low",
-  },
-  {
-    icon: Trophy,
-    place: "Champion Dojo",
-    amount: "$5,000",
-    description: "Top cash prize, sponsor interview fast-track, and the traveling trophy.",
-    className: "bg-md-secondary-container md:-translate-y-6 shadow-md-lg",
-    featured: true,
-  },
-  {
-    icon: Award,
-    place: "Rising Rookie",
-    amount: "$1,500",
-    description: "Best team competing in their first-ever hackathon, plus mentorship for a year.",
-    className: "bg-md-primary-container",
-  },
-];
+const ICONS: Record<string, LucideIcon> = {
+  Medal,
+  Trophy,
+  Award,
+};
 
 export function Prizes() {
   return (
@@ -37,37 +19,59 @@ export function Prizes() {
           <Badge variant="pennant" className="mx-auto">
             Prizes
           </Badge>
-          <h2 className="mt-4 font-heading text-3xl font-semibold tracking-tight uppercase sm:text-4xl lg:text-5xl">
-            Walk away a winner
+          <h2
+            className="mt-4 text-3xl tracking-normal uppercase sm:text-4xl lg:text-5xl varsity-layered-navy"
+            style={{ fontFamily: "'Alfa Slab One', serif" }}
+          >
+            Walk away as a winner
           </h2>
-          <p className="mt-3 text-md-on-surface-variant">
-            $10,000+ up for grabs across three categories — every team leaves with something.
+          <p className="mt-3 text-gray-600 domine italic">
+            $10,000+ up for grabs across three categories — every team leaves
+            with something.
           </p>
         </div>
 
         <div className="mt-14 grid grid-cols-1 items-center gap-6 md:grid-cols-3">
-          {PRIZES.map(({ icon: Icon, place, amount, description, className, featured }) => (
-            <Card
-              key={place}
-              className={cn("text-center transition-transform duration-300 ease-md", className)}
-            >
-              <CardContent className="flex flex-col items-center">
-                <span
+          {prizesData.map(
+            ({ icon, place, amount, description, className, featured }) => {
+              const Icon = ICONS[icon];
+              return (
+                <Card
+                  key={place}
                   className={cn(
-                    "flex h-14 w-14 items-center justify-center rounded-full bg-md-background/50",
-                    featured && "h-16 w-16",
+                    "text-center transition-transform duration-300 ease-md",
+                    className,
                   )}
                 >
-                  <Icon className={cn("h-7 w-7 text-md-foreground", featured && "h-8 w-8")} aria-hidden="true" />
-                </span>
-                <h3 className="mt-5 font-heading text-lg font-semibold uppercase">{place}</h3>
-                <p className="mt-1 font-heading text-3xl font-bold text-md-primary">{amount}</p>
-                <p className="mt-3 text-sm leading-relaxed text-md-on-surface-variant">
-                  {description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+                  <CardContent className="flex flex-col items-center">
+                    <span
+                      className={cn(
+                        "flex h-14 w-14 items-center justify-center rounded-full bg-md-background/50",
+                        featured && "h-16 w-16",
+                      )}
+                    >
+                      <Icon
+                        className={cn(
+                          "h-7 w-7 text-md-foreground",
+                          featured && "h-8 w-8",
+                        )}
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h3 className="mt-5 font-heading text-lg font-semibold uppercase text-[#fafafa]">
+                      {place}
+                    </h3>
+                    <p className="mt-1 font-heading text-3xl font-bold text-md-primary">
+                      {amount}
+                    </p>
+                    <p className="mt-3 text-sm leading-relaxed text-md-on-surface-variant font-semibold">
+                      {description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            },
+          )}
         </div>
       </Container>
     </section>

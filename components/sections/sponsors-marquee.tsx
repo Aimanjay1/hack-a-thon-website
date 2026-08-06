@@ -14,7 +14,7 @@ const SPONSORS = [
 
 export function SponsorsMarquee() {
   return (
-    <section id="sponsors" className="py-14 sm:py-20">
+    <section id="sponsors" className="py-14 sm:py-20 hidden">
       <Container>
         <div className="text-center">
           <Badge variant="pennant" className="mx-auto">

@@ -70,10 +70,10 @@ function AccordionColumn({
   return (
     <div>
       <Badge variant="pennant">{eyebrow}</Badge>
-      <h3 className="mt-4 font-heading text-2xl font-semibold tracking-tight uppercase sm:text-3xl">
+      <h3 className="mt-4 font-heading text-2xl font-semibold tracking-tight uppercase sm:text-3xl text-[#ffffff]">
         {title}
       </h3>
-      <Accordion type="single" collapsible defaultValue={`${idPrefix}-0`} className="mt-6">
+      <Accordion type="single" collapsible className="mt-6">
         {items.map((item, index) => (
           <AccordionItem key={item.question} value={`${idPrefix}-${index}`}>
             <AccordionTrigger>{item.question}</AccordionTrigger>
@@ -87,13 +87,13 @@ function AccordionColumn({
 
 export function FaqRules() {
   return (
-    <section id="faq" className="py-16 sm:py-24">
+    <section id="faq" className="py-16 sm:py-24 bg-[#1d3557]">
       <Container>
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="font-heading text-3xl font-semibold tracking-tight uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl tracking- uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
             Questions & rules
           </h2>
-          <p className="mt-3 text-md-on-surface-variant">
+          <p className="mt-3 text-md-on-surface-variant domine italic">
             Everything you need to know before you show up.
           </p>
         </div>

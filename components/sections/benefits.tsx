@@ -1,37 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import benefitsData from "@/data/benefits.json";
+import { BENEFITS } from "@/data";
 
-const BENEFITS = [
-  {
-    title: "Hands-on Learning",
-    description:
-      "Apply your web development knowledge by building a functional and responsive web application within 24 hours.",
-  },
-  {
-    title: "Collaboration & Skill Development",
-    description:
-      "Work in teams to enhance your communication, teamwork, problem-solving, and time management skills.",
-  },
-  {
-    title: "Innovation & Portfolio Building",
-    description:
-      "Create an innovative web solution and enhance your portfolio for future opportunities.",
-  },
-];
+type BenefitEntry = (typeof BENEFITS)[number];
 
-const STATS = [
-  { value: "500+", label: "Students" },
-  { value: "48", label: "Hours" },
-  { value: "15+", label: "Schools" },
-  { value: "20+", label: "Mentors" },
-];
+const CARDS = BENEFITS.filter(
+  (entry): entry is Extract<BenefitEntry, { title: unknown }> =>
+    "title" in entry,
+);
 
-const BORDER_COLORS = [
-  "#1d3557",
-  "#D4A017",
-  "#78141e",
-];
+const STATS =
+  BENEFITS.find(
+    (entry): entry is Extract<BenefitEntry, { Stats: unknown }> =>
+      "Stats" in entry,
+  )?.Stats ?? [];
+
+const BORDER_COLORS = (
+  BENEFITS.find(
+    (entry): entry is Extract<BenefitEntry, { "border-colors": unknown }> =>
+      "border-colors" in entry,
+  )?.["border-colors"] ?? []
+).map(({ color }) => color);
 
 export function Benefits() {
   return (
@@ -52,7 +41,7 @@ export function Benefits() {
             </div>
 
             <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-              {BENEFITS.map(({ title, description }, index) => (
+              {CARDS.map(({ title, content }, index) => (
                 <Card
                   key={title}
                   className="rounded-none border-t-4 bg-white card-shadow p-10 shadow-lg transition-transform duration-300 hover:-translate-y-2"
@@ -61,7 +50,7 @@ export function Benefits() {
                   <CardContent>
                     <h3 className="mb-4 font-heading text-xl uppercase varsity-title text-[#1d3557]" >{title}</h3>
                     <p className="domine italic leading-relaxed text-gray-600">
-                      {description}
+                      {content[0].description}
                     </p>
                   </CardContent>
                 </Card>

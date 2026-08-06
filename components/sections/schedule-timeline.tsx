@@ -27,7 +27,7 @@ export function ScheduleTimeline() {
           <Badge variant="pennant" className="mx-auto varsity-title">
             Schedule
           </Badge>
-          <h2 className="mt-4 text-3xl tracking- uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
+          <h2 className="mt-4 text-3xl tracking-tight uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
             The dojo timeline
           </h2>
           <p className="mt-3 text-md-on-surface-variant domine italic">

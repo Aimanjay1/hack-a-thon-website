@@ -1,5 +1,5 @@
 import { Award, Icon, Medal, Trophy, type LucideIcon } from "lucide-react";
-import prizesData from "@/data/prizes.json";
+import { PRIZES } from "@/data";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
@@ -26,13 +26,12 @@ export function Prizes() {
             Walk away as a winner
           </h2>
           <p className="mt-3 text-gray-600 domine italic">
-            $10,000+ up for grabs across three categories — every team leaves
-            with something.
+            Show them what you&apos;ve got and win big. Our hackathon offers a range of prizes for the most innovative and impactful projects.
           </p>
         </div>
 
         <div className="mt-14 grid grid-cols-1 items-center gap-6 md:grid-cols-3">
-          {prizesData.map(
+          {PRIZES.map(
             ({ icon, place, amount, description, className, featured }) => {
               const Icon = ICONS[icon];
               return (

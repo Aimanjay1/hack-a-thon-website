@@ -1,32 +1,13 @@
 import Link from "next/link";
-import { Globe, Mail, MessageCircle } from "lucide-react";
+import { Globe, Mail, MessageCircle, type LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { SOCIALS, LINK_GROUPS } from "@/data";
 
-const LINK_GROUPS = [
-  {
-    title: "Event",
-    links: [
-      { label: "Overview", href: "#top" },
-      { label: "Schedule", href: "#schedule" },
-      { label: "Prizes", href: "#prizes" },
-      { label: "FAQ & rules", href: "#faq" },
-    ],
-  },
-  {
-    title: "Info",
-    links: [
-      { label: "Code of conduct", href: "#faq" },
-      { label: "Sponsors", href: "#sponsors" },
-      { label: "Press kit", href: "#" },
-    ],
-  },
-];
-
-const SOCIALS = [
-  { icon: MessageCircle, label: "Community chat", href: "#" },
-  { icon: Globe, label: "Website", href: "#" },
-  { icon: Mail, label: "Email", href: "mailto:hello@codedojo.dev" },
-];
+const ICONS: Record<string, LucideIcon> = {
+  MessageCircle,
+  Globe,
+  Mail,
+};
 
 export function Footer() {
   return (
@@ -35,30 +16,29 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href="#top" className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-md-secondary-container bg-md-primary">
-                <span className="font-heading text-sm font-bold text-md-secondary-container">
-                  CD
-                </span>
-              </span>
+              <img src="/logo hackaton.png" alt="Hack-a-ton Logo" className="h-8 w-8 sm:h-10 sm:w-10" />
               <span className="font-heading text-xl font-semibold tracking-tight uppercase">
-                CodeDojo
+                HACK-A-TON
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
-              A 48-hour high school hackathon — November 6–8, 2026, at the
-              Downtown Convention Center in Austin, TX.
+              A 48-hour high school hackathon — October 15–17, 2026, at the
+              KICT,IIUM.
             </p>
             <div className="mt-5 flex items-center gap-1">
-              {SOCIALS.map(({ icon: Icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 transition-all duration-200 ease-md hover:bg-white/10 hover:text-md-secondary-container active:scale-95"
-                >
-                  <Icon className="h-4.5 w-4.5" aria-hidden="true" />
-                </a>
-              ))}
+              {SOCIALS.map(({ icon, label, href }) => {
+                const Icon = ICONS[icon];
+                return (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 transition-all duration-200 ease-md hover:bg-white/10 hover:text-md-secondary-container active:scale-95"
+                  >
+                    <Icon className="h-4.5 w-4.5" aria-hidden="true" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -87,21 +67,22 @@ export function Footer() {
               Questions
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-white/80">
-              Reach the organizing crew any time — we usually reply within a
-              day.
+              Any inquiries? Reach out to us via email and we&apos;ll get back to you as soon as possible.
             </p>
             <a
-              href="mailto:hello@codedojo.dev"
+              href="mailto:contacts@motionukict.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-3 inline-block text-sm font-medium text-md-secondary-container hover:underline"
             >
-              hello@codedojo.dev
+              contacts@motionukict.com
             </a>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/60 sm:flex-row">
-          <p>© 2026 CodeDojo. All rights reserved.</p>
-          <p>Built by the CodeDojo crew, for builders.</p>
+          <p>© 2026 Motion-U. All rights reserved.</p>
+          <p>Built by the Motion-U crew, for builders.</p>
         </div>
       </Container>
     </footer>

@@ -26,6 +26,8 @@ export function Hero() {
               <div className="mt-2 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="https://docs.google.com/forms/d/e/1FAIpQLScYaCuuy-nYPhO2xI2lu5KybvESA6KOJxtMNrGz8N00zfSZmw/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-none px-8 py-3 text-lg font-medium text-white transition-colors duration-200 bg-[#2d435b] hover:bg-[#7b1113]"
                   style={{
                     fontFamily: "'Alfa Slab One', serif",

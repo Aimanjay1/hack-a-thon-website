@@ -23,7 +23,7 @@ export function Benefits() {
                 <h2 className="mt-4 text-3xl tracking-wide uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-navy">
                   {BENEFITS.heading}
                 </h2>
-                <p className="mt-3 text-gray-600 domine italic">
+                <p className="mt-3 text-gray-600 domine">
                   {BENEFITS.description}
                 </p>
               </div>
@@ -38,7 +38,7 @@ export function Benefits() {
                 >
                   <CardContent>
                     <h3 className="mb-4 font-heading text-xl uppercase varsity-title text-[#1d3557]" >{title}</h3>
-                    <p className="domine italic leading-relaxed text-gray-600">
+                    <p className="domine leading-relaxed text-gray-600">
                       {description}
                     </p>
                   </CardContent>

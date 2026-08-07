@@ -64,7 +64,7 @@ export function FaqRules() {
           <h2 className="mt-4 text-3xl tracking-tight uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-navy">
             Questions & rules
           </h2>
-          <p className="mt-3 text-md-on-surface-variant domine italic">
+          <p className="mt-3 text-md-on-surface-variant domine">
             Everything you need to know before you show up.
           </p>
         </div>

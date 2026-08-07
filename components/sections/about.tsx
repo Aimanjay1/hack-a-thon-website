@@ -15,7 +15,7 @@ export function About() {
             <h2 className="mt-6 text-3xl uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-burgundy">
               {ABOUT.heading}
             </h2>
-            <p className="mt-6 text-md-on-surface-variant domine italic">
+            <p className="mt-6 text-md-on-surface-variant domine">
               {ABOUT.description}
             </p>
           </div>

@@ -12,7 +12,7 @@ export function About() {
             <Badge variant="pennant" className="tracking-wide mx-auto varsity-title">
               {ABOUT.badge}
             </Badge>
-            <h2 className="mt-6 text-3xl uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-burgundy">
+            <h2 className="mt-6 text-3xl uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-burgundy tracking-normal">
               {ABOUT.heading}
             </h2>
             <p className="mt-6 text-md-on-surface-variant domine">

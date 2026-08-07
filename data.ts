@@ -6,6 +6,7 @@ export const PRIZES = [
     description: "Nice work! You've earned it.",
     className: "bg-md-surface-container-low",
     featured: false,
+    order: "order-2 md:order-1",
   },
   {
     icon: "Trophy",
@@ -15,6 +16,7 @@ export const PRIZES = [
       "All eyes on you!",
     className: "bg-md-secondary-container md:-translate-y-6 shadow-md-lg",
     featured: true,
+    order: "order-1 md:order-2",
   },
   {
     icon: "Award",
@@ -24,6 +26,7 @@ export const PRIZES = [
       "Good things come to those who hustle.",
     className: "bg-md-primary-container",
     featured: false,
+     order: "order-3 md:order-3",
   },
 ] as const;
 

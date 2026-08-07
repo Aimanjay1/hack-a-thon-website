@@ -31,12 +31,12 @@ export function Prizes() {
         </ScrollReveal>
 
         <div className="mt-14 grid grid-cols-1 items-center gap-6 md:grid-cols-3">
-          {PRIZES.map(({ icon, place, amount, description, className, featured }, i) => {
+          {PRIZES.map(({ icon, place, amount, description, className, featured, order }, i) => {
             const Icon = ICONS[icon];
             return (
-              <ScrollReveal key={place} delay={200 + i * 150}>
+              <ScrollReveal key={place} delay={200 + i * 150} className={order}>
                 <Card
-                  className={cn("text-center transition-transform duration-300 ease-md", className)}
+                  className={cn("text-center transition-transform duration-300 ease-md", className , order)}
                 >
                   <CardContent className="flex flex-col items-center">
                     <span

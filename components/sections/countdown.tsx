@@ -47,7 +47,7 @@ export function Countdown() {
   ];
 
   return (
-    <section className="border-y-4 border-md-secondary-container bg-md-tertiary py-10 sm:py-14" aria-label="Countdown to CodeDojo">
+    <section className="border-y-4 border-md-secondary-container bg-[#1d3557] py-10 sm:py-14" aria-label="Countdown to CodeDojo">
       <Container>
         <ScrollReveal delay={0}>
           <p className="text-center text-xs tracking-[0.3em] text-white uppercase sm:text-sm font-heading">

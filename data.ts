@@ -27,72 +27,6 @@ export const PRIZES = [
   },
 ] as const;
 
-export const BENEFITS = [
-  {
-    title: "Hands-on Learning",
-    content: [
-      {
-        type: "text",
-        description:
-          "Gain practical experience through interactive projects and real-world applications.",
-      },
-    ],
-  },
-  {
-    title: "Collaboration & Skill Development",
-    content: [
-      {
-        type: "text",
-        description:
-          "Work in teams to enhance your communication, teamwork, problem-solving, and time management skills.",
-      },
-    ],
-  },
-  {
-    title: "Innovation & Portfolio Building",
-    content: [
-      {
-        type: "text",
-        description:
-          "Create an innovative web solution and enhance your portfolio for future opportunities.",
-      },
-    ],
-  },
-  {
-    Stats: [
-      {
-        value: "50+",
-        label: "Students",
-      },
-      {
-        value: "48",
-        label: "Hours",
-      },
-      {
-        value: "15+",
-        label: "Universities",
-      },
-      {
-        value: "20+",
-        label: "Mentors",
-      },
-    ],
-  },
-  {
-    "border-colors": [
-      {
-        color: "#1d3557",
-      },
-      {
-        color: "#D4A017",
-      },
-      {
-        color: "#78141e",
-      },
-    ],
-  },
-] as const;
-
 export const LINK_GROUPS = [
   {
     title: "Event",
@@ -261,11 +195,12 @@ export const BENEFITS = {
     },
   ],
   stats: [
-    { value: "500+", label: "Students" },
+    { value: "50+", label: "Students" },
     { value: "48", label: "Hours" },
-    { value: "15+", label: "Schools" },
+    { value: "15+", label: "Universities" },
     { value: "20+", label: "Mentors" },
   ],
+  borderColors: ["#1d3557", "#D4A017", "#78141e"],
 } as const;
 
 export const SCHEDULE = {

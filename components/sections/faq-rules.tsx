@@ -32,7 +32,7 @@ function AccordionColumn({
       <Badge variant="pennant" className={t.badge}>
         {eyebrow}
       </Badge>
-      <h3 className="mt-4 font-heading text-2xl font-semibold tracking-tight uppercase sm:text-3xl text-[#ffffff]">
+      <h3 className="mt-4 font-heading text-2xl font-semibold tracking-tight uppercase sm:text-3xl text-[#2d435b]">
         {title}
       </h3>
       <Accordion type="single" collapsible className="mt-6">
@@ -57,10 +57,10 @@ function AccordionColumn({
 
 export function FaqRules() {
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-[#1d3557]">
+    <section id="faq" className="py-16 sm:py-24">
       <Container>
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="mt-4 text-3xl tracking-tight uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
+          <h2 className="mt-4 text-3xl tracking-tight uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-navy">
             Questions & rules
           </h2>
           <p className="mt-3 text-md-on-surface-variant domine italic">

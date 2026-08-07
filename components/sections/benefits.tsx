@@ -3,25 +3,9 @@ import { Badge } from "@/components/ui/badge";
 import { BENEFITS } from "@/data";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
-type BenefitEntry = (typeof BENEFITS)[number];
-
-const CARDS = BENEFITS.filter(
-  (entry): entry is Extract<BenefitEntry, { title: unknown }> =>
-    "title" in entry,
-);
-
-const STATS =
-  BENEFITS.find(
-    (entry): entry is Extract<BenefitEntry, { Stats: unknown }> =>
-      "Stats" in entry,
-  )?.Stats ?? [];
-
-const BORDER_COLORS = (
-  BENEFITS.find(
-    (entry): entry is Extract<BenefitEntry, { "border-colors": unknown }> =>
-      "border-colors" in entry,
-  )?.["border-colors"] ?? []
-).map(({ color }) => color);
+const CARDS = BENEFITS.cards;
+const STATS = BENEFITS.stats;
+const BORDER_COLORS = BENEFITS.borderColors;
 
 export function Benefits() {
   return (
@@ -46,7 +30,7 @@ export function Benefits() {
             </ScrollReveal>
 
             <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-              {CARDS.map(({ title, content }, index) => (
+              {CARDS.map(({ title, description }, index) => (
                 <Card
                   key={title}
                   className="rounded-none border-t-4 bg-white card-shadow p-10 shadow-lg transition-transform duration-300 hover:-translate-y-2"
@@ -55,7 +39,7 @@ export function Benefits() {
                   <CardContent>
                     <h3 className="mb-4 font-heading text-xl uppercase varsity-title text-[#1d3557]" >{title}</h3>
                     <p className="domine italic leading-relaxed text-gray-600">
-                      {content[0].description}
+                      {description}
                     </p>
                   </CardContent>
                 </Card>

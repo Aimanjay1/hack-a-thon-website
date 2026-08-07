@@ -20,7 +20,7 @@ export function FinalCta() {
             <h2 className="mt-4 font-heading text-3xl font-semibold tracking-tight uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
               Earn your black belt in building
             </h2>
-            <p className="mt-3 text-white/80 domine italic">
+            <p className="mt-3 text-white/80 domine">
               Registration closes soon! Ready to take off your coding journey?
               Enroll your team now and secure your spot in the hackathon.
             </p>

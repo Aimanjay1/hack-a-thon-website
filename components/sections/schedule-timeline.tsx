@@ -15,7 +15,7 @@ export function ScheduleTimeline() {
             <h2 className="mt-4 text-3xl tracking- uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
               {SCHEDULE.heading}
             </h2>
-            <p className="mt-3 text-md-primary domine italic">
+            <p className="mt-3 text-md-primary domine">
               {SCHEDULE.description}
             </p>
           </div>
@@ -40,7 +40,7 @@ export function ScheduleTimeline() {
         </div>
 
         <ScrollReveal delay={650}>
-          <p className="mt-10 text-center text-sm sm:text-base text-md-primary domine italic">
+          <p className="mt-10 text-center text-sm sm:text-base text-md-primary domine">
             {SCHEDULE.note}
           </p>
         </ScrollReveal>

@@ -20,7 +20,7 @@ export function SponsorsMarquee() {
             <p className="domine text-base sm:text-lg text-[#1d3557]/80 leading-relaxed mb-6 sm:mb-10">
               {SPONSORS.description}
           </p>
-          <p className="text-[#1d3557] text-sm sm:text-lg font-medium mb-3 sm:mb-4" style={{ fontFamily: "'Domine', serif"}}>
+          <p className="text-[#1d3557] text-sm sm:text-lg font-medium mb-3 sm:mb-4" style={{ fontFamily: "'Libertinus Math', system-ui"}}>
               {SPONSORS.contactLabel}
             </p>
 

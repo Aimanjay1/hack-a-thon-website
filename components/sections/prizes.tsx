@@ -24,7 +24,7 @@ export function Prizes() {
             <h2 className="mt-4 font-heading text-3xl font-semibold tracking-tight uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
               BECOME THE BEST ONE!
             </h2>
-            <p className="mt-3 text-md-primary domine italic">
+            <p className="mt-3 text-md-primary domine">
               Showcase your skills and compete for amazing prizes!
             </p>
           </div>

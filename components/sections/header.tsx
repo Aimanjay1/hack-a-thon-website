@@ -15,19 +15,21 @@ import { NAV_LINKS } from "@/data";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-md-outline/15 bg-md-background/80 backdrop-blur-md">
-      <Container className="relative flex h-16 items-center justify-between sm:h-20">
-        <Link href="#top" className="flex items-center gap-2.5">
-          <img
-            src="/logo hackaton.png"
-            alt="Hack-a-ton Logo"
-            className="h-8 w-8 sm:h-10 sm:w-10"
-          />
-          <span className="text-base tracking-normal uppercase varsity-title text-[#7b1113]">
-            Hack-a-ton
-          </span>
-        </Link>
+      <Container className="flex h-16 items-center sm:h-20">
+        <div className="flex-1">
+          <Link href="#top" className="flex items-center gap-2.5">
+            <img
+              src="/logo hackaton.png"
+              alt="Hack-a-ton Logo"
+              className="h-8 w-8 sm:h-10 sm:w-10"
+            />
+            <span className="text-base tracking-normal uppercase varsity-title text-[#7b1113]">
+              Hack-a-ton
+            </span>
+          </Link>
+        </div>
 
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-10 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -39,7 +41,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-1 items-center justify-end gap-2">
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLScYaCuuy-nYPhO2xI2lu5KybvESA6KOJxtMNrGz8N00zfSZmw/viewform"
             className={buttonVariants({ size: "sm" })}
@@ -62,7 +64,7 @@ export function Header() {
               <SheetHeader>
                 <SheetTitle className="varsity-title">CodeDojo: Hack-A-Ton</SheetTitle>
               </SheetHeader>
-              <nav className="flex flex-col gap-1 px-6">
+              <nav className=" flex flex-col gap-1 px-6">
                 {NAV_LINKS.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link

@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 const FAQS = [
   {
@@ -71,10 +70,10 @@ function AccordionColumn({
   return (
     <div>
       <Badge variant="pennant">{eyebrow}</Badge>
-      <h3 className="mt-4 font-heading text-2xl font-semibold tracking-tight uppercase sm:text-3xl">
+      <h3 className="mt-4 font-heading text-2xl font-semibold tracking-tight uppercase sm:text-3xl text-[#ffffff]">
         {title}
       </h3>
-      <Accordion type="single" collapsible defaultValue={`${idPrefix}-0`} className="mt-6">
+      <Accordion type="single" collapsible className="mt-6">
         {items.map((item, index) => (
           <AccordionItem key={item.question} value={`${idPrefix}-${index}`}>
             <AccordionTrigger>{item.question}</AccordionTrigger>
@@ -88,26 +87,20 @@ function AccordionColumn({
 
 export function FaqRules() {
   return (
-    <section id="faq" className="py-16 sm:py-24">
+    <section id="faq" className="py-16 sm:py-24 bg-[#1d3557]">
       <Container>
-        <ScrollReveal delay={0}>
-          <div className="mx-auto max-w-xl text-center">
-            <h2 className="font-heading text-3xl font-semibold tracking-tight uppercase sm:text-4xl lg:text-5xl">
-              Questions & rules
-            </h2>
-            <p className="mt-3 text-md-on-surface-variant">
-              Everything you need to know before you show up.
-            </p>
-          </div>
-        </ScrollReveal>
+        <div className="mx-auto max-w-xl text-center">
+          <h2 className="mt-4 text-3xl tracking- uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-white">
+            Questions & rules
+          </h2>
+          <p className="mt-3 text-md-on-surface-variant domine italic">
+            Everything you need to know before you show up.
+          </p>
+        </div>
 
         <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-          <ScrollReveal delay={200}>
-            <AccordionColumn eyebrow="FAQ" title="Questions, answered" items={FAQS} idPrefix="faq" />
-          </ScrollReveal>
-          <ScrollReveal delay={350}>
-            <AccordionColumn eyebrow="Rules" title="House rules" items={RULES} idPrefix="rules" />
-          </ScrollReveal>
+          <AccordionColumn eyebrow="FAQ" title="Questions, answered" items={FAQS} idPrefix="faq" />
+          <AccordionColumn eyebrow="Rules" title="House rules" items={RULES} idPrefix="rules" />
         </div>
       </Container>
     </section>

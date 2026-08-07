@@ -3,22 +3,7 @@
 import { useEffect, useState } from "react";
 import { Container } from "@/components/ui/container";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { PHASES } from "@/data";
-
-function getTimeLeft(targetMs: number) {
-  const diff = Math.max(targetMs - Date.now(), 0);
-  return {
-    days: Math.floor(diff / 86_400_000),
-    hours: Math.floor((diff / 3_600_000) % 24),
-    minutes: Math.floor((diff / 60_000) % 60),
-    seconds: Math.floor((diff / 1_000) % 60),
-  };
-}
-
-function getCurrentPhase() {
-  const now = Date.now();
-  return PHASES.find((p) => new Date(p.date).getTime() > now) ?? null;
-}
+import { getCurrentPhase, getTimeLeft } from "@/lib/countdown";
 
 export function Countdown() {
   const [phase, setPhase] = useState(getCurrentPhase);

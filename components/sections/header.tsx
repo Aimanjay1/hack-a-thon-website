@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Container } from "@/components/ui/container";
+import { EnrollLink } from "@/components/enroll-link";
 import { NAV_LINKS } from "@/data";
 import { cn } from "@/lib/utils";
 
@@ -43,12 +44,12 @@ export function Header() {
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
-          <Link
+          <EnrollLink
             href="https://docs.google.com/forms/d/e/1FAIpQLScYaCuuy-nYPhO2xI2lu5KybvESA6KOJxtMNrGz8N00zfSZmw/viewform"
             className={cn(buttonVariants({ size: "sm" }), "hover:bg-[#7b1113] hover:text-white")}
           >
             Enroll
-          </Link>
+          </EnrollLink>
 
           <Sheet>
             <SheetTrigger asChild>

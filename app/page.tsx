@@ -10,6 +10,7 @@ import { FaqRules } from "@/components/sections/faq-rules";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 import AthenaChatbot from "@/components/athena-chatbot";
+import { NotifyPopup } from "@/components/notify-popup";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       </main>
       <Footer />
       <AthenaChatbot />
+      <NotifyPopup />
     </div>
   );
 }

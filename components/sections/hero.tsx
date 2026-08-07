@@ -31,6 +31,12 @@ export function Hero() {
                 </h1>
               </ScrollReveal>
 
+              <ScrollReveal delay={300}>
+                <p className="max-w-md text-lg leading-relaxed text-md-on-surface-variant domine italic" >
+                  {HERO.description}
+                </p>
+              </ScrollReveal>
+
               <ScrollReveal delay={200}>
                 <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm font-medium sm:text-base text-md-on-surface-variant" style={{ fontFamily: "'Alfa Slab One', serif" }}>
                   {HERO.eventInfo.map(({ icon, text }) => {
@@ -43,12 +49,6 @@ export function Hero() {
                     );
                   })}
                 </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={300}>
-                <p className="max-w-md text-lg leading-relaxed text-md-on-surface-variant domine italic" >
-                  {HERO.description}
-                </p>
               </ScrollReveal>
 
               <ScrollReveal delay={400}>

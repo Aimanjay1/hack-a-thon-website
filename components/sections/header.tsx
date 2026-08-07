@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/sheet";
 import { Container } from "@/components/ui/container";
 import { NAV_LINKS } from "@/data";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   return (
@@ -29,12 +30,12 @@ export function Header() {
           </Link>
         </div>
 
-        <nav className="hidden items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-10 md:flex pl-14">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-base text-[#856300] transition-colors duration-200 hover:text-md-primary font-heading uppercase" 
+              className="text-base text-[#856300] transition-colors duration-200 hover:text-md-primary font-heading uppercase "
             >
               {link.label}
             </Link>
@@ -44,7 +45,7 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end gap-2">
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLScYaCuuy-nYPhO2xI2lu5KybvESA6KOJxtMNrGz8N00zfSZmw/viewform"
-            className={buttonVariants({ size: "sm" })}
+            className={cn(buttonVariants({ size: "sm" }), "hover:bg-[#7b1113] hover:text-white")}
           >
             Enroll
           </Link>
@@ -57,14 +58,14 @@ export function Header() {
                 className="md:hidden"
                 aria-label="Open menu"
               >
-                <Menu className="h-5 w-5" aria-hidden="true" />
+                <Menu className="h-5 w-5 " aria-hidden="true" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader>
                 <SheetTitle className="varsity-title">CodeDojo: Hack-A-Ton</SheetTitle>
               </SheetHeader>
-              <nav className=" flex flex-col gap-1 px-6">
+              <nav className=" flex flex-col gap-1 px-6 items-center justify-between">
                 {NAV_LINKS.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link

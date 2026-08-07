@@ -42,10 +42,10 @@ function AccordionColumn({
             value={`${idPrefix}-${index}`}
             className={t.item}
           >
-            <AccordionTrigger className={t.trigger}>
+            <AccordionTrigger className={`${t.trigger} font-heading`}>
               {item.question}
             </AccordionTrigger>
-            <AccordionContent className={t.content}>
+            <AccordionContent className={`${t.content} font-heading text-sm`}>
               {item.answer}
             </AccordionContent>
           </AccordionItem>

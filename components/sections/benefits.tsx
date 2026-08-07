@@ -15,12 +15,12 @@ export function Benefits() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(white_1.5px,transparent_1.5px)] bg-size-[20px_20px] opacity-10"
       />
 
-      <div className="relative z-10 px-6 py-14 sm:px-12 sm:py-20 lg:px-16">
+      <div className="relative z-10 px-6 pb-14 sm:px-12 sm:py-18 lg:px-16">
             <ScrollReveal delay={100}>
               <div className="mx-auto max-w-xl text-center">
                 <Badge variant="pennant" className="mx-auto varsity-title">{BENEFITS.badge}</Badge>
 
-                <h2 className="mt-4 text-3xl tracking-wide uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-navy">
+                <h2 className="mt-4 text-3xl tracking- uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-navy">
                   {BENEFITS.heading}
                 </h2>
                 <p className="mt-3 text-gray-600 domine">

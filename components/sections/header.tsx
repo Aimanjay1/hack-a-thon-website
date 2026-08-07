@@ -27,7 +27,7 @@ export function Header() {
             alt="Hack-a-ton Logo"
             className="h-8 w-8 sm:h-10 sm:w-10"
           />
-          <span className="text-lg tracking-tight uppercase varsity-title text-[#7b1113]">
+          <span className="text-base tracking-normal uppercase varsity-title text-[#7b1113]">
             Hack-a-ton
           </span>
         </Link>
@@ -37,7 +37,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-[#856300] varsity-title transition-colors duration-200 hover:text-md-primary"
+              className="text-base text-[#856300] transition-colors duration-200 hover:text-md-primary font-heading uppercase" 
             >
               {link.label}
             </Link>
@@ -47,8 +47,8 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link
             href="#register"
-            className="inline-flex items-center justify-center rounded-none px-5 py-2 text-base transition-colors duration-200 bg-primary text-primary-foreground hover:bg-[#7a1620] hover:text-white"
-            style={{ fontFamily: "'Alfa Slab One', serif" }}
+            className="inline-flex items-center justify-center rounded-none px-7 py-2 text-sm transition-colors varsity-title duration-200 bg-primary text-primary-foreground hover:bg-[#7a1620] hover:text-white"
+           
           >
             Enroll
           </Link>

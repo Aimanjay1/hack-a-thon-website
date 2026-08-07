@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 const FAQS = [
   {
@@ -89,18 +90,24 @@ export function FaqRules() {
   return (
     <section id="faq" className="py-16 sm:py-24">
       <Container>
-        <div className="mx-auto max-w-xl text-center">
-          <h2 className="font-heading text-3xl font-semibold tracking-tight uppercase sm:text-4xl lg:text-5xl">
-            Questions & rules
-          </h2>
-          <p className="mt-3 text-md-on-surface-variant">
-            Everything you need to know before you show up.
-          </p>
-        </div>
+        <ScrollReveal delay={0}>
+          <div className="mx-auto max-w-xl text-center">
+            <h2 className="font-heading text-3xl font-semibold tracking-tight uppercase sm:text-4xl lg:text-5xl">
+              Questions & rules
+            </h2>
+            <p className="mt-3 text-md-on-surface-variant">
+              Everything you need to know before you show up.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-          <AccordionColumn eyebrow="FAQ" title="Questions, answered" items={FAQS} idPrefix="faq" />
-          <AccordionColumn eyebrow="Rules" title="House rules" items={RULES} idPrefix="rules" />
+          <ScrollReveal delay={200}>
+            <AccordionColumn eyebrow="FAQ" title="Questions, answered" items={FAQS} idPrefix="faq" />
+          </ScrollReveal>
+          <ScrollReveal delay={350}>
+            <AccordionColumn eyebrow="Rules" title="House rules" items={RULES} idPrefix="rules" />
+          </ScrollReveal>
         </div>
       </Container>
     </section>

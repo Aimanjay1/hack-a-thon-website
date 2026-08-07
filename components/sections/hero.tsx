@@ -46,7 +46,7 @@ export function Hero() {
               </ScrollReveal>
 
               <ScrollReveal delay={300}>
-                <p className="max-w-md text-lg leading-relaxed text-md-on-surface-variant domine italic">
+                <p className="max-w-md text-lg leading-relaxed text-md-on-surface-variant italic" style={{ fontFamily: "'Domine', serif" }}>
                   {HERO.description}
                 </p>
               </ScrollReveal>

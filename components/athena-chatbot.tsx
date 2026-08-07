@@ -36,6 +36,7 @@ function buildHistory(messages: ChatMessage[]): string {
    Component
    ─────────────────────────────────────────── */
 export default function AthenaChatbot() {
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
@@ -44,6 +45,10 @@ export default function AthenaChatbot() {
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Auto-scroll to latest message
   useEffect(() => {
@@ -103,6 +108,8 @@ export default function AthenaChatbot() {
       setLoading(false);
     }
   }
+
+  if (!mounted) return null;
 
   return (
     <>

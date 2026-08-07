@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+html {
+  scroll-behavior: smooth;
+}
 
 .domine {
   font-family: "'Alfa Slab One', serif";
@@ -10,6 +13,12 @@
   font-style: italic;
 }
 
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 .card-shadow {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
@@ -105,12 +114,12 @@
     --md-background: #fffdd0;
     --md-foreground: #f5eacd;
     --md-primary: #f4bc6a;
-    --md-on-primary: #242327;
+    --md-on-primary: #856300;
     --md-primary-container: #5c4322;
     --md-on-primary-container: #fce2b0;
     --md-secondary-container: #7a1620;
     --md-on-secondary-container: #f8dcdc;
-    --md-tertiary: #5a7fa6;
+    --md-tertiary: #2d435b;
     --md-on-tertiary: #0f1d2b;
     --md-surface-container: #29282c;
     --md-surface-container-low: #232226;

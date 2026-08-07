@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BENEFITS } from "@/data";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 type BenefitEntry = (typeof BENEFITS)[number];
 
@@ -31,14 +32,16 @@ export function Benefits() {
       />
 
       <div className="relative z-10 px-6 py-14 sm:px-12 sm:py-20 lg:px-16">
-            <div className="mx-auto max-w-xl text-center">
-              <Badge variant="glass">Why join</Badge>
-              <h2 className="mt-4 text-3xl tracking-normal uppercase sm:text-4xl lg:text-5xl varsity-layered-navy" style={{ fontFamily: "'Alfa Slab One', serif"}}>
-                Turn Ideas into Reality
-              </h2>
-              <p className="mt-3 text-gray-600 domine italic">
-              Gain hands-on experience, strengthen your skills, and build a functional web application in a 24-hour hackathon.              </p>
-            </div>
+            <ScrollReveal delay={0}>
+              <div className="mx-auto max-w-xl text-center ">
+                <Badge variant="glass" className="bg-[#7b1113] font-heading">Why join</Badge>
+                <h2 className="mt-4 text-3xl tracking-wider uppercase sm:text-4xl lg:text-5xl varsity-layered-navy" style={{ fontFamily: "'Alfa Slab One', serif"}}>
+                  Turn Ideas into Reality
+                </h2>
+                <p className="mt-3 text-gray-600 domine italic">
+                Gain hands-on experience, strengthen your skills, and build a functional web application in a 24-hour hackathon.              </p>
+              </div>
+            </ScrollReveal>
 
             <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
               {CARDS.map(({ title, content }, index) => (
@@ -60,15 +63,15 @@ export function Benefits() {
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 border-y border-white/20 py-8 sm:grid-cols-4 hidden">
               {STATS.map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center">
-                  <span className="font-heading text-3xl font-semibold text-md-secondary-container sm:text-4xl">
+                  <span className="font-heading text-3xl font-semibold text-md-secondary-container sm:text-5xl">
                     {stat.value}
                   </span>
-                 <span className="mt-2 text-[0.65rem] font-medium tracking-[0.2em] text-gray-600 uppercase sm:text-sm">
+                 <span className="mt-2 text-[0.65rem] font-medium tracking-[0.2em] text-gray-600 uppercase font-heading sm:text-sm">
                     {stat.label}
                   </span>
                 </div>
               ))}
-            </div>
+            </div> */}
       </div>
     </div>
   );

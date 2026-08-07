@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 import { FAQS, RULES, TONES } from "@/data";
 import { Link } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 type Tone = keyof typeof TONES;
 

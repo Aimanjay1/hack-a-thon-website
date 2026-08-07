@@ -1,6 +1,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { cn } from "@/lib/utils";
 import { Link } from "lucide-react";
 
@@ -44,7 +45,7 @@ export function FinalCta() {
                 Ask a question
               </a>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </Container>
     </section>

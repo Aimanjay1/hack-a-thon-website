@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Globe, Mail, MessageCircle, type LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SOCIALS, LINK_GROUPS } from "@/data";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 const ICONS: Record<string, LucideIcon> = {
   MessageCircle,
@@ -40,25 +41,45 @@ export function Footer() {
                 );
               })}
             </div>
-          </div>
+          </ScrollReveal>
 
-          {LINK_GROUPS.map((group) => (
-            <div key={group.title}>
+          {LINK_GROUPS.map((group, i) => (
+            <ScrollReveal key={group.title} delay={100 + i * 100}>
+              <div>
+                <h3 className="font-heading text-xs font-semibold tracking-widest text-md-secondary-container uppercase">
+                  {group.title}
+                </h3>
+                <ul className="mt-4 flex flex-col gap-3">
+                  {group.links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-white/80 transition-colors duration-200 hover:text-white"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
+          ))}
+
+          <ScrollReveal delay={300}>
+            <div>
               <h3 className="font-heading text-xs font-semibold tracking-widest text-md-secondary-container uppercase">
-                {group.title}
+                Questions
               </h3>
-              <ul className="mt-4 flex flex-col gap-3">
-                {group.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-white/80 transition-colors duration-200 hover:text-white"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-4 text-sm leading-relaxed text-white/80">
+                Reach the organizing crew any time — we usually reply within a
+                day.
+              </p>
+              <a
+                href="mailto:hello@codedojo.dev"
+                className="mt-3 inline-block text-sm font-medium text-md-secondary-container hover:underline"
+              >
+                hello@codedojo.dev
+              </a>
             </div>
           ))}
 

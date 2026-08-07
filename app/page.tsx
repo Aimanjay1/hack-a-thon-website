@@ -8,7 +8,7 @@ import { Prizes } from "@/components/sections/prizes";
 import { FaqRules } from "@/components/sections/faq-rules";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
-import { ScrollFab } from "@/components/sections/scroll-fab";
+import AthenaChatbot from "@/components/athena-chatbot";
 
 export default function Home() {
   return (
@@ -26,6 +26,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <AthenaChatbot />
     </div>
   );
 }

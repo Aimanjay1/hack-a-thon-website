@@ -82,6 +82,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/60 sm:flex-row">
           <p>© 2026 Motion-U. All rights reserved.</p>
+          <img src="/MotionU-logo.png" alt="Motion-U Logo" className="h-8 w-8 sm:h-10 sm:w-10" />
           <p>Built by the Motion-U crew, for builders.</p>
         </div>
       </Container>

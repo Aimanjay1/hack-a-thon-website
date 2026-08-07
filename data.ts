@@ -104,6 +104,7 @@ export const SCHEDULE = {
         "Project submission, team presentations, judging session, and award & closing ceremony.",
     },
   ],
+  note: "*The full event tentative will be provided later through the official WhatsApp group.",
 } as const;
 
 export const SPONSORS = {

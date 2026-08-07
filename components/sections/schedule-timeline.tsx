@@ -38,6 +38,12 @@ export function ScheduleTimeline() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={650}>
+          <p className="mt-10 text-center text-sm sm:text-base text-md-primary domine italic">
+            {SCHEDULE.note}
+          </p>
+        </ScrollReveal>
       </Container>
     </section>
   );

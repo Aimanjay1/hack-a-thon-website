@@ -65,7 +65,7 @@ export function Header() {
               <SheetHeader>
                 <SheetTitle className="varsity-title">CodeDojo: Hack-A-Ton</SheetTitle>
               </SheetHeader>
-              <nav className=" flex flex-col gap-1 px-6 items-center justify-between">
+              <nav className=" flex flex-col gap-1 px-6 ">
                 {NAV_LINKS.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link

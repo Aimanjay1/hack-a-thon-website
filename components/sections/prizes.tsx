@@ -1,34 +1,16 @@
-import { Award, Medal, Trophy } from "lucide-react";
+import { Award, Icon, Medal, Trophy, type LucideIcon } from "lucide-react";
+import { PRIZES } from "@/data";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { cn } from "@/lib/utils";
 
-const PRIZES = [
-  {
-    icon: Medal,
-    place: "Runner-Up",
-    amount: "$2,500",
-    description: "Cash prize plus a laptop upgrade kit for every team member.",
-    className: "bg-md-surface-container-low",
-  },
-  {
-    icon: Trophy,
-    place: "Champion Dojo",
-    amount: "$5,000",
-    description: "Top cash prize, sponsor interview fast-track, and the traveling trophy.",
-    className: "bg-md-secondary-container md:-translate-y-6 shadow-md-lg",
-    featured: true,
-  },
-  {
-    icon: Award,
-    place: "Rising Rookie",
-    amount: "$1,500",
-    description: "Best team competing in their first-ever hackathon, plus mentorship for a year.",
-    className: "bg-md-primary-container",
-  },
-];
+const ICONS: Record<string, LucideIcon> = {
+  Medal,
+  Trophy,
+  Award,
+};
 
 export function Prizes() {
   return (

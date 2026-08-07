@@ -46,16 +46,20 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <Link
-            href="#register"
-            className="inline-flex items-center justify-center rounded-none px-7 py-2 text-sm transition-colors varsity-title duration-200 bg-primary text-primary-foreground hover:bg-[#7a1620] hover:text-white"
-           
+            href="https://docs.google.com/forms/d/e/1FAIpQLScYaCuuy-nYPhO2xI2lu5KybvESA6KOJxtMNrGz8N00zfSZmw/viewform"
+            className={buttonVariants({ size: "sm" })}
           >
             Enroll
           </Link>
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon-sm" className="md:hidden" aria-label="Open menu">
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                className="md:hidden"
+                aria-label="Open menu"
+              >
                 <Menu className="h-5 w-5" aria-hidden="true" />
               </Button>
             </SheetTrigger>

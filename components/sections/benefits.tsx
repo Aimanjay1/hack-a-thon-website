@@ -1,13 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { BENEFITS } from "@/data";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
-const BORDER_COLORS = [
-  "#1d3557",
-  "#D4A017",
-  "#78141e",
-];
+type BenefitEntry = (typeof BENEFITS)[number];
+
+const CARDS = BENEFITS.filter(
+  (entry): entry is Extract<BenefitEntry, { title: unknown }> =>
+    "title" in entry,
+);
+
+const STATS =
+  BENEFITS.find(
+    (entry): entry is Extract<BenefitEntry, { Stats: unknown }> =>
+      "Stats" in entry,
+  )?.Stats ?? [];
+
+const BORDER_COLORS = (
+  BENEFITS.find(
+    (entry): entry is Extract<BenefitEntry, { "border-colors": unknown }> =>
+      "border-colors" in entry,
+  )?.["border-colors"] ?? []
+).map(({ color }) => color);
 
 export function Benefits() {
   return (
@@ -32,25 +46,24 @@ export function Benefits() {
             </ScrollReveal>
 
             <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-              {BENEFITS.cards.map(({ title, description }, index) => (
-                <ScrollReveal key={title} delay={200 + index * 150}>
-                  <Card
-                    className="rounded-none border-t-4 bg-white card-shadow p-8 shadow-lg transition-transform duration-300 hover:-translate-y-2"
-                    style={{ borderTopColor: BORDER_COLORS[index] }}
-                  >
-                    <CardContent>
-                      <h3 className="min-h-15 mb-4 sm:mb-4 font-heading text-lg uppercase varsity-title text-[#1d3557]" >{title}</h3>
-                      <p className=" domine italic leading-relaxed text-gray-600">
-                        {description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </ScrollReveal>
+              {CARDS.map(({ title, content }, index) => (
+                <Card
+                  key={title}
+                  className="rounded-none border-t-4 bg-white card-shadow p-10 shadow-lg transition-transform duration-300 hover:-translate-y-2"
+                  style={{ borderTopColor: BORDER_COLORS[index] }}
+                >
+                  <CardContent>
+                    <h3 className="mb-4 font-heading text-xl uppercase varsity-title text-[#1d3557]" >{title}</h3>
+                    <p className="domine italic leading-relaxed text-gray-600">
+                      {content[0].description}
+                    </p>
+                  </CardContent>
+                </Card>
               ))}
         </div>
 
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 border-y border-white/20 py-8 sm:grid-cols-4 hidden">
-              {BENEFITS.stats.map((stat) => (
+              {STATS.map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center">
                   <span className="font-heading text-3xl font-semibold text-md-secondary-container sm:text-4xl">
                     {stat.value}

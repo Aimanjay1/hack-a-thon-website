@@ -59,6 +59,7 @@ export function FaqRules() {
   return (
     <section id="faq" className="py-16 sm:py-24">
       <Container>
+        <ScrollReveal delay={100}>
         <div className="mx-auto max-w-xl text-center">
           <h2 className="mt-4 text-3xl tracking-tight uppercase sm:text-4xl lg:text-5xl varsity-title varsity-layered-navy">
             Questions & rules
@@ -101,6 +102,7 @@ export function FaqRules() {
             </a>
           </div>
         </div>
+        </ScrollReveal>
       </Container>
     </section>
   );

@@ -48,7 +48,7 @@ export function Footer() {
           {LINK_GROUPS.map((group, i) => (
             <ScrollReveal key={group.title} delay={100 + i * 100}>
               <div>
-                <h3 className="font-heading text-xs font-semibold tracking-widest text-md-secondary-container uppercase">
+                <h3 className="font-heading text-xs font-semibold tracking-widest text-[#f4bc6a] uppercase">
                   {group.title}
                 </h3>
                 <ul className="mt-4 flex flex-col gap-3">
@@ -69,7 +69,7 @@ export function Footer() {
 
           <ScrollReveal delay={300}>
             <div>
-              <h3 className="font-heading text-xs font-semibold tracking-widest text-md-secondary-container uppercase">
+              <h3 className="font-heading text-xs font-semibold tracking-widest text-[#f4bc6a] uppercase">
                 Questions
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-white/80">
@@ -79,7 +79,7 @@ export function Footer() {
                 href="mailto:contacts@motionukict.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-block text-sm font-medium text-md-secondary-container hover:underline"
+                className="mt-3 inline-block text-sm font-medium text-[#f4bc6a] hover:underline"
               >
                 contacts@motionukict.com
               </a>

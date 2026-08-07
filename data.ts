@@ -235,3 +235,9 @@ export const SPONSORS = {
   contactLabel: "For any inquiries or further details, please contact:",
   contactEmail: "partnerships@motionukict.com",
 } as const;
+
+export const NAV_LINKS = [
+  { href: "#schedule", label: "Schedule" },
+  { href: "#prizes", label: "Prizes" },
+  { href: "#faq", label: "FAQ" },
+] as const;

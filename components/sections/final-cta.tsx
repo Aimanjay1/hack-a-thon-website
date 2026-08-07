@@ -3,11 +3,13 @@ import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 import { Link } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function FinalCta() {
   return (
     <section id="register" className="py-12 sm:py-16">
       <Container>
+        <ScrollReveal delay={100}>
         <div className="relative overflow-hidden rounded-md-lg bg-[#0e69c5] text-center sm:rounded-md-2xl lg:rounded-md-3xl">
           <div
             aria-hidden="true"
@@ -46,6 +48,7 @@ export function FinalCta() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </Container>
     </section>
   );

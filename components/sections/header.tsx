@@ -10,17 +10,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Container } from "@/components/ui/container";
-
-const NAV_LINKS = [
-  { href: "#schedule", label: "Schedule" },
-  { href: "#prizes", label: "Prizes" },
-  { href: "#faq", label: "FAQ" },
-];
+import { NAV_LINKS } from "@/data";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-md-outline/15 bg-md-background/80 backdrop-blur-md">
-      <Container className="flex h-16 items-center justify-between sm:h-20">
+      <Container className="relative flex h-16 items-center justify-between sm:h-20">
         <Link href="#top" className="flex items-center gap-2.5">
           <img
             src="/logo hackaton.png"
@@ -32,7 +27,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

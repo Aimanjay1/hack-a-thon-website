@@ -1,9 +1,6 @@
-import { buttonVariants } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
-import { cn } from "@/lib/utils";
-import { Link } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { EnrollLink } from "@/components/enroll-link";
 
 export function FinalCta() {
   return (
@@ -25,7 +22,7 @@ export function FinalCta() {
               Enroll your team now and secure your spot in the hackathon.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-              <a
+              <EnrollLink
                 href="https://docs.google.com/forms/d/e/1FAIpQLScYaCuuy-nYPhO2xI2lu5KybvESA6KOJxtMNrGz8N00zfSZmw/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -35,7 +32,7 @@ export function FinalCta() {
                 }}
               >
                 Enroll your team
-              </a>
+              </EnrollLink>
               <a
                 href="https://athena.motionukict.com/"
                 className="inline-flex items-center justify-center rounded-none px-8 py-3 text-lg font-medium transition-colors duration-200 bg-white text-[#2d435b] border-2 border-[#2d435b] hover:bg-[#2d435b] hover:text-white"

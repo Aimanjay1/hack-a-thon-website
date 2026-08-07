@@ -70,7 +70,7 @@ html {
   --md-surface-container-low: #ead89a;
   --md-outline: #8c7b4e;
   --md-outline-variant: #ddcb94;
-  --md-on-surface-variant: #5c5240;
+  --md-on-surface-variant: #f8cb78;
   --md-error: #b3261e;
   --md-on-error: #ffffff;
 
@@ -125,7 +125,7 @@ html {
     --md-surface-container-low: #232226;
     --md-outline: #8f805a;
     --md-outline-variant: #3a362e;
-    --md-on-surface-variant: #c9bc93;
+    --md-on-surface-variant: #1d3557;
     --md-error: #f2b8b5;
     --md-on-error: #601410;
   }

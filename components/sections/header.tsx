@@ -65,14 +65,14 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader>
-                <SheetTitle className="varsity-title">CodeDojo: Hack-a-thon</SheetTitle>
+                <SheetTitle className="varsity-title">CodeDojo: Hack-A-Ton</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-6">
                 {NAV_LINKS.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link
                       href={link.href}
-                      className="rounded-md-sm px-3 py-3 text-base varsity-title transition-colors duration-200 hover:bg-md-primary/10 hover:text-md-primary"
+                      className="rounded-md-sm px-3 py-3 text-xl font-heading transition-colors duration-200 hover:bg-md-primary/10 hover:text-md-primary"
                     >
                       {link.label}
                     </Link>

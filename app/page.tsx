@@ -1,5 +1,6 @@
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
+import { About } from "@/components/sections/about";
 import { Countdown } from "@/components/sections/countdown";
 import { Benefits } from "@/components/sections/benefits";
 import { ScheduleTimeline } from "@/components/sections/schedule-timeline";
@@ -18,6 +19,8 @@ export default function Home() {
         <Hero />
         <br />
         <Countdown />
+        <div className="py-4 sm:py-10" />
+        <About />
         <Benefits />
         <ScheduleTimeline />
         <SponsorsMarquee />

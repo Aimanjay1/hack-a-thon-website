@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto, Oswald } from "next/font/google";
+import {
+  Roboto,
+  Oswald,
+  Alfa_Slab_One,
+  Libertinus_Math,
+} from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -14,10 +19,64 @@ const oswald = Oswald({
   weight: ["500", "600", "700"],
 });
 
+const alfaSlabOne = Alfa_Slab_One({
+  variable: "--font-varsity",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const libertinusMath = Libertinus_Math({
+  variable: "--font-math",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hackaton.motionukict.com";
+
 export const metadata: Metadata = {
-  title: "CodeDojo: Hack-a-thon 2026",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "CodeDojo: Hack-A-Ton",
+    template: "%s | CodeDojo: Hack-A-Ton",
+  },
   description:
-    "CodeDojo is a 48-hour high school hackathon. Form a team, pick your dojo, and build something worth bragging about — October 15-17, 2026.",
+    "CodeDojo is a 24-hour high school hackathon. Form a team, pick your dojo, and build something worth bragging about — October 15-17, 2026.",
+  applicationName: "CodeDojo: Hack-A-Ton",
+  keywords: [
+    "hackathon",
+    "CodeDojo",
+    "Hack-A-Ton",
+    "Motion-U",
+    "IIUM",
+    "KICT",
+    "coding competition",
+    "high school hackathon",
+    "Malaysia",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/logo-hackaton.png",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "CodeDojo: Hack-A-Ton",
+    locale: "en_MY",
+    url: "/",
+    title: "CodeDojo: Hack-A-Ton 2026",
+    description:
+      "CodeDojo is a 24-hour high school hackathon. Form a team, pick your dojo, and build something worth bragging about — October 15-17, 2026.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CodeDojo: Hack-A-Ton 2026",
+    description:
+      "CodeDojo is a 24-hour high school hackathon. Form a team, pick your dojo, and build something worth bragging about — October 15-17, 2026.",
+  },
 };
 
 export const viewport: Viewport = {
@@ -33,15 +92,8 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`h-full antialiased ${roboto.variable} ${oswald.variable}`}
+      className={`h-full antialiased ${roboto.variable} ${oswald.variable} ${alfaSlabOne.variable} ${libertinusMath.variable}`}
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Domine:ital@0;1&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet"></link>
-      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
       </body>

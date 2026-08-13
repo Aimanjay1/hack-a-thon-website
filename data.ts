@@ -62,7 +62,7 @@ export const FAQS = [
   {
     question: "What is Hack-A-Ton?",
     answer:
-      "A 48-hour hackathon where students collaborate to create innovative web solutions, as well as a chance to learn, network, and win prizes.",
+      "A 24-hour hackathon where students collaborate to create innovative web solutions, as well as a chance to learn, network, and win prizes.",
   },
   {
     question: "Is there a registration fee?",
@@ -163,7 +163,7 @@ export const HERO = {
     },
   },
   logo: {
-    src: "/logo hackaton.png",
+    src: "/logo-hackaton.png",
     alt: "Hack-a-ton Logo",
   },
 } as const;
@@ -199,7 +199,7 @@ export const BENEFITS = {
   ],
   stats: [
     { value: "50+", label: "Students" },
-    { value: "48", label: "Hours" },
+    { value: "24", label: "Hours" },
     { value: "15+", label: "Universities" },
     { value: "20+", label: "Mentors" },
   ],

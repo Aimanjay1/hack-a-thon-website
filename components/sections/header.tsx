@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
@@ -20,9 +21,11 @@ export function Header() {
       <Container className="flex h-16 items-center sm:h-20">
         <div className="flex-1">
           <Link href="#top" className="flex items-center gap-2.5">
-            <img
-              src="/logo hackaton.png"
+            <Image
+              src="/logo-hackaton.png"
               alt="Hack-a-ton Logo"
+              width={40}
+              height={40}
               className="h-8 w-8 sm:h-10 sm:w-10"
             />
             <span className="text-base tracking-normal uppercase varsity-title text-[#7b1113]">

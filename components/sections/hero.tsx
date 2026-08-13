@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, MapPin } from "lucide-react";
 import { EnrollLink } from "@/components/enroll-link";
 import { Badge } from "@/components/ui/badge";
@@ -77,9 +78,12 @@ export function Hero() {
             </div>
 
             <div className="relative flex items-center justify-center px-6 py-2 sm:px-10 sm:py-8">
-              <img
+              <Image
                 src={HERO.logo.src}
                 alt={HERO.logo.alt}
+                width={1903}
+                height={1896}
+                priority
                 className="w-70 sm:w-64 lg:w-auto"
                 style={{ animation: "float 3s ease-in-out infinite" }}
               />

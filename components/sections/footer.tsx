@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Globe, Mail, MessageCircle, type LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SOCIALS, LINK_GROUPS } from "@/data";
@@ -18,13 +19,19 @@ export function Footer() {
           <ScrollReveal delay={0}>
             <div>
               <Link href="#top" className="flex items-center gap-2.5">
-                <img src="/logo hackaton.png" alt="Hack-a-ton Logo" className="h-8 w-8 sm:h-10 sm:w-10" />
+                <Image
+                  src="/logo-hackaton.png"
+                  alt="Hack-a-ton Logo"
+                  width={40}
+                  height={40}
+                  className="h-8 w-8 sm:h-10 sm:w-10"
+                />
                 <span className="font-heading text-xl font-semibold tracking-tight uppercase">
                   HACK-A-TON
                 </span>
               </Link>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
-                A 48-hour high school hackathon — October 15–17, 2026, at the
+                A 24-hour high school hackathon — October 15–17, 2026, at the
                 KICT,IIUM.
               </p>
               <div className="mt-5 flex items-center gap-1">
@@ -89,7 +96,13 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/60 sm:flex-row">
           <p>© 2026 Motion-U. All rights reserved.</p>
-          <img src="/MotionU-logo.png" alt="Motion-U Logo" className="h-8 w-8 sm:h-10 sm:w-10" />
+          <Image
+            src="/MotionU-logo.png"
+            alt="Motion-U Logo"
+            width={40}
+            height={40}
+            className="h-8 w-8 sm:h-10 sm:w-10"
+          />
           <p>Built by the Motion-U crew, for builders.</p>
         </div>
       </Container>

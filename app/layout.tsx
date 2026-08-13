@@ -13,10 +13,11 @@ const roboto = Roboto({
   weight: ["400", "500", "700"],
 });
 
+// Oswald is a variable font — loading the variable axis (rather than pinning
+// static weights) fetches one file per subset instead of one per weight.
 const oswald = Oswald({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
 });
 
 const alfaSlabOne = Alfa_Slab_One({

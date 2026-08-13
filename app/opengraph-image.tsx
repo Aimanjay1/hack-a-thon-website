@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 export const alt =
-  "CodeDojo: Hack-A-Ton 2026 — 24-hour high school hackathon at KICT, IIUM, October 15-17, 2026.";
+  "CodeDojo: Hack-A-Ton 2026 — 24-hour Motion-U hackathon at KICT, IIUM, October 16-17, 2026.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -61,7 +61,7 @@ export default async function OpengraphImage() {
               maxWidth: "900px",
             }}
           >
-            The 24-hour high school hackathon. Form a team, pick your dojo,
+            The 24-hour hackathon. Form a team, pick your dojo,
             and build something worth bragging about.
           </div>
         </div>
@@ -76,7 +76,7 @@ export default async function OpengraphImage() {
             textTransform: "uppercase",
           }}
         >
-          <span>Oct 15–17, 2026</span>
+          <span>Oct 16–17, 2026</span>
           <span>KICT, IIUM · Motion-U</span>
         </div>
       </div>

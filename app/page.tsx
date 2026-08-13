@@ -19,14 +19,14 @@ const SITE_URL =
 export const metadata: Metadata = {
   title: "CodeDojo: Hack-A-Ton 2026 — 24-Hour High School Hackathon",
   description:
-    "CodeDojo is a 24-hour high school hackathon in Kuala Lumpur. Form a team of three, pick your dojo, and build something worth bragging about — October 15-17, 2026, at KICT, IIUM.",
+    "CodeDojo is a 24-hour Motion-U hackathon. Form a team of three, pick your dojo, and build something worth bragging about — October 16-17, 2026, at KICT, IIUM.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "CodeDojo: Hack-A-Ton 2026 — 24-Hour High School Hackathon",
+    title: "CodeDojo: Hack-A-Ton 2026 — 24-Hour Motion-U Hackathon",
     description:
-      "CodeDojo is a 24-hour high school hackathon in Kuala Lumpur. Form a team of three, pick your dojo, and build something worth bragging about — October 15-17, 2026, at KICT, IIUM.",
+      "CodeDojo is a 24-hour Motion-U Hackaton. Form a team of three, pick your dojo, and build something worth bragging about — October 16-17, 2026, at KICT, IIUM.",
     type: "website",
     url: "/",
     siteName: "CodeDojo: Hack-A-Ton",

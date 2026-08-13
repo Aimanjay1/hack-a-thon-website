@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "CodeDojo: Hack-A-Ton 2026",
     short_name: "Hack-A-Ton",
     description:
-      "CodeDojo is a 24-hour high school hackathon. Form a team, pick your dojo, and build something worth bragging about — October 15-17, 2026.",
+      "CodeDojo is a 24-hour Motion-U hackathon. Form a team, pick your dojo, and build something worth bragging about — October 16-17, 2026.",
     start_url: "/",
     display: "standalone",
     background_color: "#fff9eb",

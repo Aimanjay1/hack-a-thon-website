@@ -239,8 +239,95 @@ export const SPONSORS = {
   contactEmail: "partnerships@motionukict.com",
 } as const;
 
+export const MERCH = {
+  badge: "Merch",
+  heading: "LIMITED EDITION",
+  description:
+    "Get your favourites while stocks last.",
+  products: [
+    {
+      name: "Sticker Pack",
+      price: "RM 4",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/sticker pack.png",
+        alt: "Sticker Pack",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "Keychain",
+      price: "RM 4",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/keychain.png",
+        alt: "Keychain",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "Enamel Pin",
+      price: "RM 13",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/enamel pin.png",
+        alt: "Enamel Pin",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "BUNDLE A: Sticker+ Keychain",
+      price: "RM 8",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/bundle a.png",
+        alt: "Bundle A",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "BUNDLE B: Sticker + Enamel Pin (1 design)",
+      price: "RM 17",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/bundle b.png",
+        alt: "Bundle B",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "BUNDLE C: Sticker + Keychain + Enamel Pin (1 design)",
+      price: "RM 21",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/bundle c.png",
+        alt: "Bundle C",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "T-shirt (Coming Soon)",
+      price: "RM 15",
+      link: "https://forms.gle/BYq2UQYJLpqkXttk6",
+      image: {
+        src: "/t-shirt.png",
+        alt: "T-shirt",
+        width: 600,
+        height: 600,
+      },
+    },
+  ],
+} as const;
+
 export const NAV_LINKS = [
   { href: "#schedule", label: "Schedule" },
   { href: "#prizes", label: "Prizes" },
+  { href: "#merch", label: "Merch" },
   { href: "#faq", label: "FAQ" },
 ] as const;

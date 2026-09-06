@@ -241,6 +241,12 @@ export const SPONSORS = {
 
 export const NAV_LINKS = [
   { href: "#schedule", label: "Schedule" },
+  { href: "#merchs-and-sponsors", label: "Merchs and Sponsors" },
   { href: "#prizes", label: "Prizes" },
   { href: "#faq", label: "FAQ" },
 ] as const;
+
+export const MERCHS = {
+    heading: "Hack-A-Ton Merch",
+    description: "Get your hands on exclusive Hack-A-Ton merchandise! Show off your participation and support for the event with our limited edition merch items.",
+  } as const;

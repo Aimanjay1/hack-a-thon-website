@@ -390,10 +390,10 @@ export const MERCHS = {
   bundles: [
     {
       name: "BUNDLE A: Sticker+ Keychain",
-      price: "RM 8",
+      price: "RM 7",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle-a.png",
+        src: "/bundle(A).png",
         alt: "Bundle A",
         width: 600,
         height: 600,
@@ -404,7 +404,7 @@ export const MERCHS = {
       price: "RM 17",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle-b.png",
+        src: "/bundle(B).png",
         alt: "Bundle B",
         width: 600,
         height: 600,
@@ -412,10 +412,10 @@ export const MERCHS = {
     },
     {
       name: "BUNDLE C: Sticker + Keychain + Enamel Pin (1 design)",
-      price: "RM 21",
+      price: "RM 20",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle-c.png",
+        src: "/bundle(C).png",
         alt: "Bundle C",
         width: 600,
         height: 600,

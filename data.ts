@@ -306,7 +306,7 @@ export const MERCHS = {
       price: "RM 8",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle a.png",
+        src: "/bundle-a.png",
         alt: "Bundle A",
         width: 600,
         height: 600,
@@ -317,7 +317,7 @@ export const MERCHS = {
       price: "RM 17",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle b.png",
+        src: "/bundle-b.png",
         alt: "Bundle B",
         width: 600,
         height: 600,
@@ -328,7 +328,7 @@ export const MERCHS = {
       price: "RM 21",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle c.png",
+        src: "/bundle-c.png",
         alt: "Bundle C",
         width: 600,
         height: 600,

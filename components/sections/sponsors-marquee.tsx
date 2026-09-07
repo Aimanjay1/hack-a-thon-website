@@ -21,7 +21,11 @@ export function MerchAndSponsors() {
         <div className="bg-gray-200 p-4 rounded-lg">3</div>
         <div className="bg-gray-200 p-4 rounded-lg">4</div>
       </div>
-
+      <div className="grid grid-cols-3 gap-4 m-10">
+        <div className="bg-gray-200 p-4 rounded-lg">5</div>
+        <div className="bg-gray-200 p-4 rounded-lg">6</div>
+        <div className="bg-gray-200 p-4 rounded-lg">7</div>
+      </div>
       <Container className="max-w-5xl border-t-4 border-[#0d1748] bg-white p-10 sm:p-10 card-shadow rounded-lg">
         <ScrollReveal delay={0}>
           <div className="flex flex-col items-center text-center mb-6">

@@ -289,6 +289,19 @@ export const MERCHS = {
       },
     },
     {
+      name: "T-shirt (Coming Soon)",
+      price: "RM 15",
+      link: "https://forms.gle/BYq2UQYJLpqkXttk6",
+      image: {
+        src: "/t-shirt.png",
+        alt: "T-shirt",
+        width: 600,
+        height: 600,
+      },
+    },
+  ],
+  bundles: [
+    {
       name: "BUNDLE A: Sticker+ Keychain",
       price: "RM 8",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
@@ -317,17 +330,6 @@ export const MERCHS = {
       image: {
         src: "/bundle c.png",
         alt: "Bundle C",
-        width: 600,
-        height: 600,
-      },
-    },
-    {
-      name: "T-shirt (Coming Soon)",
-      price: "RM 15",
-      link: "https://forms.gle/BYq2UQYJLpqkXttk6",
-      image: {
-        src: "/t-shirt.png",
-        alt: "T-shirt",
         width: 600,
         height: 600,
       },

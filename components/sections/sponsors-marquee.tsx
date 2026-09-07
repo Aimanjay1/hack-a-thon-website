@@ -47,7 +47,7 @@ export function MerchAndSponsors() {
   return (
     <section id="merchs-and-sponsors" className="py-12 p-7 sm:py-24">
       <ScrollReveal delay={0}>
-        <div className="flex flex-col items-center text-center mb-6">
+        <div className="flex flex-col items-center text-center mb-2 sm:mb-6">
           <Badge variant="pennant" className="mx-auto varsity-title">
             {MERCHS.badge}
           </Badge>
@@ -57,12 +57,12 @@ export function MerchAndSponsors() {
           <p className="mt-3 text-gray-600 domine">{MERCHS.description}</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 m-6 sm:m-10 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 my-4 mx-0 sm:m-10 lg:grid-cols-4">
           {MERCHS.products.map((item) => (
             <MerchCard key={item.name} item={item} />
           ))}
         </div>
-        <div className="grid grid-cols-1 gap-6 m-6 sm:m-10 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 my-6 mx-3 sm:m-10 sm:grid-cols-3">
           {MERCHS.bundles.map((bundle) => (
             <MerchCard key={bundle.name} item={bundle} />
           ))}

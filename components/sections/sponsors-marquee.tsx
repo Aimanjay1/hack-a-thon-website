@@ -2,12 +2,16 @@ import { Container } from "@/components/ui/container";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { MERCHS } from "@/data";
 import { SPONSORS } from "@/data";
+import { Badge } from "../ui/badge";
 
 export function MerchAndSponsors() {
   return (
     <section id="merchs-and-sponsors" className="py-12 p-7 sm:py-24">
       <ScrollReveal delay={0}>
         <div className="flex flex-col items-center text-center mb-6">
+          <Badge variant="pennant" className="mx-auto varsity-title">
+            {MERCHS.badge}
+          </Badge>
           <h2 className="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl tracking-wide uppercase varsity-title varsity-layered-navy">
             {MERCHS.heading}
           </h2>

@@ -12,8 +12,7 @@ export const PRIZES = [
     icon: "Trophy",
     place: "Champion",
     amount: "RM 90",
-    description:
-      "All eyes on you!",
+    description: "All eyes on you!",
     className: "bg-md-secondary-container md:-translate-y-6 shadow-md-lg",
     featured: true,
     order: "order-1 md:order-2",
@@ -22,11 +21,10 @@ export const PRIZES = [
     icon: "Award",
     place: "Rising Rookie",
     amount: "RM 30",
-    description:
-      "Good things come to those who hustle.",
+    description: "Good things come to those who hustle.",
     className: "bg-md-primary-container",
     featured: false,
-     order: "order-3 md:order-3",
+    order: "order-3 md:order-3",
   },
 ] as const;
 
@@ -62,7 +60,7 @@ export const FAQS = [
   {
     question: "What is Hack-A-Ton?",
     answer:
-      "A 48-hour hackathon where students collaborate to create innovative web solutions, as well as a chance to learn, network, and win prizes.",
+      "A 24-hour hackathon where students collaborate to create innovative web solutions, as well as a chance to learn, network, and win prizes.",
   },
   {
     question: "Is there a registration fee?",
@@ -71,11 +69,13 @@ export const FAQS = [
   },
   {
     question: "What should I bring?",
-    answer: "Your laptop and charger. We provide meals, snacks, and a place to crash if you need it.",
+    answer:
+      "Your laptop and charger. We provide meals, snacks, and a place to crash if you need it.",
   },
   {
     question: "Who is organizing this event?",
-    answer: "It is organized by Motion-U club, a fascinating technopreneurships club in KICT.",
+    answer:
+      "It is organized by Motion-U club, a fascinating technopreneurships club in KICT.",
   },
   {
     question: "When is the registration deadline?",
@@ -86,11 +86,13 @@ export const FAQS = [
 export const RULES = [
   {
     question: "Team size",
-    answer: "Teams must consist of exactly 3 members; individual participation is not allowed.",
+    answer:
+      "Teams must consist of exactly 3 members; individual participation is not allowed.",
   },
   {
     question: "Eligibility",
-    answer: "The hackathon is open only to registered IIUM undergraduate students.",
+    answer:
+      "The hackathon is open only to registered IIUM undergraduate students.",
   },
   {
     question: "Original work only",
@@ -99,11 +101,13 @@ export const RULES = [
   },
   {
     question: "Code of conduct",
-    answer: "Participants must uphold IIUM’s core values, show respect, and avoid any harassment, plagiarism, or unsportsmanlike behavior.",
+    answer:
+      "Participants must uphold IIUM’s core values, show respect, and avoid any harassment, plagiarism, or unsportsmanlike behavior.",
   },
   {
     question: "Submission deadline",
-    answer: "All repositories, documentation, and slides must be submitted before the event ends, with no late submissions accepted.",
+    answer:
+      "All repositories, documentation, and slides must be submitted before the event ends, with no late submissions accepted.",
   },
 ] as const;
 
@@ -163,7 +167,7 @@ export const HERO = {
     },
   },
   logo: {
-    src: "/logo hackaton.png",
+    src: "/logo-hackaton.png",
     alt: "Hack-a-ton Logo",
   },
 } as const;
@@ -199,7 +203,7 @@ export const BENEFITS = {
   ],
   stats: [
     { value: "50+", label: "Students" },
-    { value: "48", label: "Hours" },
+    { value: "24", label: "Hours" },
     { value: "15+", label: "Universities" },
     { value: "20+", label: "Mentors" },
   ],
@@ -209,8 +213,7 @@ export const BENEFITS = {
 export const SCHEDULE = {
   badge: "Schedule",
   heading: "The dojo timeline",
-  description:
-    "Three days, one relentless build. Here's how it runs.",
+  description: "Three days, one relentless build. Here's how it runs.",
   days: [
     {
       day: "Pre-Hack-A-Ton",
@@ -283,7 +286,7 @@ export const MERCH = {
       price: "RM 8",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle a.png",
+        src: "/bundle-a.png",
         alt: "Bundle A",
         width: 600,
         height: 600,
@@ -294,7 +297,7 @@ export const MERCH = {
       price: "RM 17",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle b.png",
+        src: "/bundle-b.png",
         alt: "Bundle B",
         width: 600,
         height: 600,
@@ -305,7 +308,7 @@ export const MERCH = {
       price: "RM 21",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
-        src: "/bundle c.png",
+        src: "/bundle-c.png",
         alt: "Bundle C",
         width: 600,
         height: 600,
@@ -327,7 +330,96 @@ export const MERCH = {
 
 export const NAV_LINKS = [
   { href: "#schedule", label: "Schedule" },
+  { href: "#merchs-and-sponsors", label: "Merchs and Sponsors" },
   { href: "#prizes", label: "Prizes" },
   { href: "#merch", label: "Merch" },
   { href: "#faq", label: "FAQ" },
 ] as const;
+
+export const MERCHS = {
+  badge: "Merch",
+  heading: "Hack-A-Ton Merch",
+  description:
+    "Get your hands on exclusive Hack-A-Ton merchandise! Show off your participation and support for the event with our limited edition merch items.",
+  products: [
+    {
+      name: "Sticker Pack",
+      price: "RM 4",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/sticker pack.png",
+        alt: "Sticker Pack",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "Keychain",
+      price: "RM 4",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/keychain.png",
+        alt: "Keychain",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "Enamel Pin",
+      price: "RM 13",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/enamel pin.png",
+        alt: "Enamel Pin",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "T-shirt (Coming Soon)",
+      price: "RM 15",
+      link: "https://forms.gle/BYq2UQYJLpqkXttk6",
+      image: {
+        src: "/t-shirt.png",
+        alt: "T-shirt",
+        width: 600,
+        height: 600,
+      },
+    },
+  ],
+  bundles: [
+    {
+      name: "BUNDLE A: Sticker+ Keychain",
+      price: "RM 8",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/bundle-a.png",
+        alt: "Bundle A",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "BUNDLE B: Sticker + Enamel Pin (1 design)",
+      price: "RM 17",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/bundle-b.png",
+        alt: "Bundle B",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "BUNDLE C: Sticker + Keychain + Enamel Pin (1 design)",
+      price: "RM 21",
+      link: "https://forms.gle/VYuxemcD6tkJQWb16",
+      image: {
+        src: "/bundle-c.png",
+        alt: "Bundle C",
+        width: 600,
+        height: 600,
+      },
+    },
+  ],
+} as const;

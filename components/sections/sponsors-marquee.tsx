@@ -14,7 +14,7 @@ type MerchItem = {
 
 function MerchCard({ item }: { item: MerchItem }) {
   return (
-    <Card className="group/card relative flex h-full overflow-hidden rounded-md-lg border border-[#1d3557]/10 bg-white card-shadow pt-0 pb-0 transition-all duration-300 hover:-translate-y-2 hover:border-[#D4A017]/60 hover:shadow-xl">
+    <Card className="group/card relative flex h-full flex-col gap-0 overflow-hidden rounded-md-lg border border-[#1d3557]/10 bg-white card-shadow pt-0 pb-0 transition-all duration-300 hover:-translate-y-2 hover:border-[#D4A017]/60 hover:shadow-xl">
       <div className="absolute inset-x-0 top-0 z-10 h-1 bg-linear-to-r from-[#D4A017] via-[#f4bd6a] to-[#D4A017]" />
       <div className="overflow-hidden">
         <img
@@ -25,11 +25,11 @@ function MerchCard({ item }: { item: MerchItem }) {
           className="h-44 w-full object-cover transition-transform duration-500 group-hover/card:scale-110"
         />
       </div>
-      <div className="flex flex-1 flex-col items-center gap-2 p-5 text-center">
-        <h3 className="text-lg font-bold leading-snug text-[#1d3557]">
+      <div className="flex flex-1 flex-col items-center gap-1 p-4 text-center">
+        <h3 className=" h-8 text-sm font-bold leading-snug text-[#1d3557]">
           {item.name}
         </h3>
-        <p className="text-xl font-bold text-[#D4A017]">{item.price}</p>
+        <p className="text-lg font-bold text-[#D4A017]">{item.price}</p>
         <a
           href={item.link}
           target="_blank"
@@ -45,7 +45,7 @@ function MerchCard({ item }: { item: MerchItem }) {
 
 export function MerchAndSponsors() {
   return (
-    <section id="merchs-and-sponsors" className="py-12 p-7 sm:py-24">
+    <section id="merchs-and-sponsors" className="py-12 p-5 sm:py-24">
       <ScrollReveal delay={0}>
         <div className="flex flex-col items-center text-center mb-2 sm:mb-6">
           <Badge variant="pennant" className="mx-auto varsity-title">
@@ -57,7 +57,7 @@ export function MerchAndSponsors() {
           <p className="mt-3 text-gray-600 domine">{MERCHS.description}</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 my-4 mx-0 sm:m-10 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 gap-y-6 my-4 sm:m-10 lg:grid-cols-4">
           {MERCHS.products.map((item) => (
             <MerchCard key={item.name} item={item} />
           ))}

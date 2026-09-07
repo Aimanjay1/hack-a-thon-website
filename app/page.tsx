@@ -7,7 +7,6 @@ import { Benefits } from "@/components/sections/benefits";
 import { ScheduleTimeline } from "@/components/sections/schedule-timeline";
 import { MerchAndSponsors } from "@/components/sections/sponsors-marquee";
 import { Prizes } from "@/components/sections/prizes";
-import { Merch } from "@/components/sections/merch";
 import { FaqRules } from "@/components/sections/faq-rules";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
@@ -106,7 +105,6 @@ export default function Home() {
         <ScheduleTimeline />
         <MerchAndSponsors />
         <Prizes />
-        <Merch />
         <FaqRules />
         <FinalCta />
       </main>

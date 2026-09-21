@@ -366,7 +366,7 @@ export const MERCHS = {
     },
     {
       name: "Enamel Pin",
-      price: "RM 13",
+      price: "RM 15",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
         src: "/enamel pin.png",
@@ -376,11 +376,11 @@ export const MERCHS = {
       },
     },
     {
-      name: "T-shirt (Coming Soon)",
+      name: "T-shirt",
       price: "RM 15",
       link: "https://forms.gle/BYq2UQYJLpqkXttk6",
       image: {
-        src: "/t-shirt.png",
+        src: "/t-shirt.jpg",
         alt: "T-shirt",
         width: 600,
         height: 600,
@@ -389,7 +389,7 @@ export const MERCHS = {
   ],
   bundles: [
     {
-      name: "BUNDLE A: Sticker+ Keychain",
+      name: "BUNDLE A: Sticker + Keychain",
       price: "RM 7",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
@@ -401,7 +401,7 @@ export const MERCHS = {
     },
     {
       name: "BUNDLE B: Sticker + Enamel Pin (1 design)",
-      price: "RM 17",
+      price: "RM 18",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
         src: "/bundle(B).png",
@@ -412,7 +412,7 @@ export const MERCHS = {
     },
     {
       name: "BUNDLE C: Sticker + Keychain + Enamel Pin (1 design)",
-      price: "RM 20",
+      price: "RM 21",
       link: "https://forms.gle/VYuxemcD6tkJQWb16",
       image: {
         src: "/bundle(C).png",

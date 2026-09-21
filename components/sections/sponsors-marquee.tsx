@@ -22,7 +22,7 @@ function MerchCard({ item }: { item: MerchItem }) {
           alt={item.image.alt}
           width={item.image.width}
           height={item.image.height}
-          className="h-44 w-full object-cover transition-transform duration-500 group-hover/card:scale-110"
+          className="h-60git w-full object-cover transition-transform duration-500 group-hover/card:scale-110"
         />
       </div>
       <div className="flex flex-1 flex-col items-center gap-1 p-4 text-center">

@@ -2,7 +2,7 @@ export const PRIZES = [
   {
     icon: "Medal",
     place: "Runner-Up",
-    amount: "RM 60",
+    amount: "RM 125",
     description: "Nice work! You've earned it.",
     className: "bg-md-surface-container-low",
     featured: false,
@@ -11,7 +11,7 @@ export const PRIZES = [
   {
     icon: "Trophy",
     place: "Champion",
-    amount: "RM 90",
+    amount: "RM 190",
     description: "All eyes on you!",
     className: "bg-md-secondary-container md:-translate-y-6 shadow-md-lg",
     featured: true,
@@ -20,7 +20,7 @@ export const PRIZES = [
   {
     icon: "Award",
     place: "Rising Rookie",
-    amount: "RM 30",
+    amount: "RM 65",
     description: "Good things come to those who hustle.",
     className: "bg-md-primary-container",
     featured: false,

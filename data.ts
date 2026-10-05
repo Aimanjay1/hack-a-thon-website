@@ -156,7 +156,9 @@ export const HERO = {
   ],
   description:
     "Join our hackathon and bring your ideas to life. Whether you're a beginner or an experienced developer, this is your chance to learn, collaborate, and compete for exciting prizes.",
-  cta: {
+  update: 
+    "*We’ve reached full team capacity for now! We’ll update you if more slots open later. Thank you for your interest!",
+    cta: {
     primary: {
       text: "Enroll your team",
       href: "https://docs.google.com/forms/d/e/1FAIpQLScYaCuuy-nYPhO2xI2lu5KybvESA6KOJxtMNrGz8N00zfSZmw/viewform?usp=header",

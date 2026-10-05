@@ -52,6 +52,7 @@ export function Countdown() {
               </div>
             </ScrollReveal>
           ))}
+
         </div>
 
       </Container>

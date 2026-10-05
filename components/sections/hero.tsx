@@ -75,6 +75,12 @@ export function Hero() {
                   </Link>
                 </div>
               </ScrollReveal>
+
+              <ScrollReveal delay={300}>
+                <p className="max-w-md text-sm leading-relaxed text-md-on-surface-variant domine italic" >
+                  {HERO.update}
+                </p>
+              </ScrollReveal>
             </div>
 
             <div className="relative flex items-center justify-center px-6 py-2 sm:px-10 sm:py-8">

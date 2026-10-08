@@ -237,9 +237,31 @@ export const SCHEDULE = {
 } as const;
 
 export const SPONSORS = {
-  heading: "Calling For Sponsors",
+  heading: "Sponsors",
   description:
     "Support CodeDojo: Hack-A-Ton and gain valuable brand exposure among students and aspiring developers. Sponsors will benefit from product showcases, social media promotions, logo placement on official event materials, and official recognition through appreciation plaques and e-certificates.",
+  logos: [
+    {
+      name: "Make Your Tee",
+      link: "https://www.makeyourtee.com/",
+      image: {
+        src: "/myT-logo.png",
+        alt: "myT Logo",
+        width: 600,
+        height: 600,
+      },
+    },
+    {
+      name: "3F Resource",
+      link: "https://www.3fresources.com/",
+      image: {
+        src: "/3F-Resource.jpg",
+        alt: "3F Resource Logo",
+        width: 600,
+        height: 600,
+      },
+    },
+  ],
   contactLabel: "For any inquiries or further details, please contact:",
   contactEmail: "partnerships@motionukict.com",
 } as const;

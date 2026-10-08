@@ -79,24 +79,28 @@ export function MerchAndSponsors() {
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
-          <div className="flex flex-col items-center max-w-4xl mx-auto text-center ">
-            <p className="domine text-base sm:text-lg text-[#1d3557]/80 leading-relaxed mb-6 sm:mb-10">
-              {SPONSORS.description}
-            </p>
-            <p
-              className="text-[#1d3557] text-sm sm:text-lg font-medium mb-3 sm:mb-4"
-              style={{ fontFamily: "'Libertinus Math', system-ui" }}
-            >
-              {SPONSORS.contactLabel}
-            </p>
-
-            <div className="bg-[#f4bd6ac2] w-70 sm:w-2xl py-5 sm:p-8 card-shadow border-l-4 border-[#7b1113]">
-              <a
-                className="text-xs sm:text-xl md:text-2xl varsity-title text-[#7b1113] hover:text-[#1d3557] transition-colors break-all"
-                href={`mailto:${SPONSORS.contactEmail}`}
-              >
-                {SPONSORS.contactEmail}
-              </a>
+          <div className="flex items-center justify-center max-w-4xl mx-auto text-center ">
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              {SPONSORS.logos.map((logo) => (
+                <a
+                  key={logo.name}
+                  href={logo.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mx-4 hover:scale-105 transition-transform duration-300"
+                >
+                  <img
+                    src={logo.image.src}
+                    alt={logo.image.alt}
+                    width={logo.image.width}
+                    height={logo.image.height}
+                    className="h-16 w-auto object-contain"
+                  />
+                  <h2 className="mt-2 text-sm font-bold leading-snug text-[#1d3557] text-center">
+                    {logo.name}
+                  </h2>
+                </a>
+              ))}
             </div>
           </div>
         </ScrollReveal>

@@ -267,7 +267,7 @@ export const SPONSORS = {
 } as const;
 
 export const MERCH = {
-  badge: "Merch",
+  badge: "Merch And Sponsors",
   heading: "LIMITED EDITION",
   description:
     "Get your favourites while stocks last.",
